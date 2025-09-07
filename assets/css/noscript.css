@@ -1,0 +1,72 @@
+/* NoScript CSS - Fallback styles when JavaScript is disabled */
+
+body.is-preload {
+    overflow: hidden;
+}
+
+#wrapper {
+    opacity: 0;
+}
+
+/* Show content immediately when JS is disabled */
+body.is-preload #wrapper {
+    opacity: 1;
+}
+
+/* Navigation fallback - show all sections */
+#main article {
+    display: block !important;
+    margin-bottom: 4rem;
+}
+
+/* Header adjustments */
+#header {
+    min-height: auto;
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+/* Navigation becomes a table of contents */
+#header nav {
+    margin-top: 3rem;
+}
+
+#header nav ul {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+#header nav ul li {
+    margin-bottom: 1rem;
+}
+
+#header nav ul li:last-child {
+    margin-bottom: 0;
+}
+
+#header nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print-friendly adjustments */
+@media print {
+    #header nav {
+        display: none;
+    }
+    
+    #main article {
+        page-break-before: always;
+    }
+    
+    #main article:first-child {
+        page-break-before: auto;
+    }
+}

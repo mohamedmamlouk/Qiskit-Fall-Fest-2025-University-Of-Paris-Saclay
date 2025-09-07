@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🔄 CACHE CLEANER - Fall Fest 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a2e;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #16213e;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #667eea;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 CACHE CLEANER</h1>
+        <p>Cette page va vider le cache de votre navigateur et vous rediriger vers le site principal.</p>
+        
+        <div class="instructions">
+            <h3>📋 Instructions :</h3>
+            <ol>
+                <li><strong>Cliquez sur "Vider le Cache"</strong></li>
+                <li><strong>Attendez 3 secondes</strong></li>
+                <li><strong>Vous serez automatiquement redirigé</strong></li>
+                <li><strong>Vous devriez voir les onglets Day 1, Day 2, Day 3, Day 4</strong></li>
+            </ol>
+        </div>
+        
+        <button class="btn" onclick="clearCacheAndRedirect()">🧹 Vider le Cache</button>
+        <br>
+        <a href="/" class="btn">🏠 Aller au site directement</a>
+        
+        <div id="status" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+        function clearCacheAndRedirect() {
+            const status = document.getElementById('status');
+            
+            status.innerHTML = '🔄 Vidage du cache en cours...';
+            
+            // Vider tous les caches possibles
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    return Promise.all(
+                        names.map(name => caches.delete(name))
+                    );
+                }).then(() => {
+                    status.innerHTML = '✅ Cache Service Worker vidé';
+                });
+            }
+            
+            // Vider localStorage et sessionStorage
+            try {
+                localStorage.clear();
+                sessionStorage.clear();
+                status.innerHTML += '<br>✅ Storage local vidé';
+            } catch(e) {
+                console.log('Storage déjà vide');
+            }
+            
+            // Recharger avec paramètres anti-cache
+            setTimeout(() => {
+                status.innerHTML += '<br>🔄 Redirection vers le site...';
+                
+                // Rediriger avec timestamp pour éviter le cache
+                const timestamp = new Date().getTime();
+                window.location.href = `/?bust=${timestamp}&nocache=true`;
+            }, 3000);
+        }
+        
+        // Auto-nettoyage au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧹 Page cache cleaner chargée');
+            
+            // Vider automatiquement les caches
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    names.forEach(name => caches.delete(name));
+                });
+            }
+        });
+    </script>
+</body>
+</html>

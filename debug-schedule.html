@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>DEBUG - Schedule Interactive Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
+        body {
+            background: #0a0a0f;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .debug-info {
+            background: #1a1a2e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #16213e;
+        }
+        .interactive-schedule {
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .schedule-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .tab-button {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 120px;
+        }
+        .tab-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .tab-day {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .tab-date {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        .tab-theme {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        .day-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .day-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .day-header h3 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .events-timeline {
+            margin-top: 20px;
+        }
+        .event-item {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .event-time {
+            color: #667eea;
+            font-weight: 600;
+            min-width: 120px;
+        }
+        .event-details h4 {
+            margin: 0 0 5px 0;
+            color: white;
+        }
+        .event-details p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        .event-type {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 8px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h2>🔧 DEBUG - Schedule Interactive Test</h2>
+        <p>Cette page teste la même structure que le site principal mais avec du CSS inline pour éliminer les problèmes de cache.</p>
+        <div id="debug-log"></div>
+    </div>
+
+    <div class="interactive-schedule">
+        <h2>Event Schedule - INTERACTIVE VERSION</h2>
+        <p>Cliquez sur les onglets pour changer de jour</p>
+        
+        <div class="schedule-tabs">
+            <button class="tab-button active" data-day="day1">
+                <div class="tab-day">Day 1</div>
+                <div class="tab-date">Nov 17</div>
+                <div class="tab-theme">Foundations</div>
+            </button>
+            <button class="tab-button" data-day="day2">
+                <div class="tab-day">Day 2</div>
+                <div class="tab-date">Nov 18</div>
+                <div class="tab-theme">Applications</div>
+            </button>
+            <button class="tab-button" data-day="day3">
+                <div class="tab-day">Day 3</div>
+                <div class="tab-date">Nov 19</div>
+                <div class="tab-theme">Advanced</div>
+            </button>
+            <button class="tab-button" data-day="day4">
+                <div class="tab-day">Day 4</div>
+                <div class="tab-date">Nov 20</div>
+                <div class="tab-theme">Hackathon</div>
+            </button>
+        </div>
+
+        <div class="schedule-content">
+            <!-- Day 1 -->
+            <div class="day-content active" id="day1">
+                <div class="day-header">
+                    <h3>Day 1: Quantum Foundations</h3>
+                </div>
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-time">9:00 - 9:30</div>
+                        <div class="event-details">
+                            <h4>Welcome & Registration</h4>
+                            <p>Coffee and networking</p>
+                            <span class="event-type">Opening</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">9:30 - 11:00</div>
+                        <div class="event-details">
+                            <h4>Introduction to Quantum Computing</h4>
+                            <p>Basic principles of quantum mechanics</p>
+                            <span class="event-type">Workshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-content" id="day2">
+                <div class="day-header">
+                    <h3>Day 2: Quantum Applications</h3>
+                </div>
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-time">9:00 - 10:30</div>
+                        <div class="event-details">
+                            <h4>Quantum Algorithms</h4>
+                            <p>Advanced quantum computing applications</p>
+                            <span class="event-type">Workshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-content" id="day3">
+                <div class="day-header">
+                    <h3>Day 3: Advanced Topics</h3>
+                </div>
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-time">9:00 - 10:30</div>
+                        <div class="event-details">
+                            <h4>Quantum Error Correction</h4>
+                            <p>Error correction and fault tolerance</p>
+                            <span class="event-type">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-content" id="day4">
+                <div class="day-header">
+                    <h3>Day 4: Hackathon</h3>
+                </div>
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-time">9:00 - 17:00</div>
+                        <div class="event-details">
+                            <h4>Quantum Computing Hackathon</h4>
+                            <p>Build quantum applications and compete</p>
+                            <span class="event-type">Competition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Debug logging
+        const debugLog = document.getElementById('debug-log');
+        function log(message) {
+            debugLog.innerHTML += '<div style="color: #667eea; margin: 5px 0;">' + message + '</div>';
+            console.log(message);
+        }
+
+        log('🚀 JavaScript loaded successfully');
+        
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            log('✅ DOM loaded');
+            
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const dayContents = document.querySelectorAll('.day-content');
+            
+            log(`📊 Found ${tabButtons.length} tab buttons and ${dayContents.length} day contents`);
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetDay = this.getAttribute('data-day');
+                    log(`🎯 Clicked on ${targetDay}`);
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    dayContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const targetContent = document.getElementById(targetDay);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        log(`✅ Switched to ${targetDay} successfully`);
+                    } else {
+                        log(`❌ Could not find content for ${targetDay}`);
+                    }
+                });
+            });
+            
+            log('🎉 Tab functionality initialized successfully');
+        });
+    </script>
+</body>
+</html>

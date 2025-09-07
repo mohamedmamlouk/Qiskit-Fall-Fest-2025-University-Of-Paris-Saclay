@@ -1,0 +1,49 @@
+# GitHub Pages Configuration
+title: "Qiskit Fall Fest 2025 - University of Paris-Saclay"
+description: "Official website for Qiskit Fall Fest 2025 hosted by University of Paris-Saclay. Celebrating 100 Years of Quantum Mechanics."
+url: "https://yourusername.github.io"
+baseurl: "/qiskit-fall-fest-2025"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .git/
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# Include files
+include:
+  - _pages
+  - assets
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO settings
+author: "Qiskit Fall Fest 2025 Organizing Committee"
+twitter:
+  username: qiskitfallparis
+  card: summary_large_image
+
+facebook:
+  publisher: qiskitfallparis
+
+social:
+  name: "Qiskit Fall Fest 2025"
+  links:
+    - https://twitter.com/qiskitfallparis
+    - https://linkedin.com/company/qiskit-fall-fest-paris-saclay
+    - https://github.com/yourusername/qiskit-fall-fest-2025
+
+# Google Analytics (replace with your tracking ID)
+google_analytics: "G-XXXXXXXXXX"

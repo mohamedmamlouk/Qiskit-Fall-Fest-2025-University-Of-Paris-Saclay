@@ -1,0 +1,700 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Qiskit Fall Fest 2025 - REAL TEAM VERSION</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Join us for Qiskit Fall Fest 2025 at University of Paris-Saclay - A 4-day quantum computing event celebrating 100 years of quantum mechanics" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- CSS avec nouveau timestamp -->
+    <link rel="stylesheet" href="assets/css/ultra-modern.css?v=20250907-1600">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS inline pour les onglets interactifs pour éviter tout problème de cache -->
+    <style>
+        /* Styles pour schedule interactive - priorité maximale */
+        .interactive-schedule .schedule-tabs {
+            display: flex !important;
+            gap: 15px !important;
+            margin-bottom: 40px !important;
+            flex-wrap: wrap !important;
+        }
+        .interactive-schedule .tab-button {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 15px !important;
+            padding: 20px !important;
+            color: white !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            text-align: center !important;
+            min-width: 120px !important;
+        }
+        .interactive-schedule .tab-button:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-2px) !important;
+        }
+        .interactive-schedule .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            border-color: #667eea !important;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3) !important;
+        }
+        .interactive-schedule .tab-day {
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            margin-bottom: 5px !important;
+        }
+        .interactive-schedule .tab-date {
+            font-size: 14px !important;
+            opacity: 0.8 !important;
+            margin-bottom: 5px !important;
+        }
+        .interactive-schedule .tab-theme {
+            font-size: 12px !important;
+            opacity: 0.6 !important;
+        }
+        .interactive-schedule .day-content {
+            display: none !important;
+            background: rgba(255, 255, 255, 0.03) !important;
+            border-radius: 15px !important;
+            padding: 30px !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+        .interactive-schedule .day-content.active {
+            display: block !important;
+            animation: fadeInSchedule 0.5s ease !important;
+        }
+        @keyframes fadeInSchedule {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .interactive-schedule .day-header h3 {
+            color: #667eea !important;
+            font-size: 28px !important;
+            margin-bottom: 10px !important;
+        }
+        .interactive-schedule .events-timeline {
+            margin-top: 20px !important;
+        }
+        .interactive-schedule .event-item {
+            display: flex !important;
+            gap: 20px !important;
+            padding: 15px 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        .interactive-schedule .event-time {
+            color: #667eea !important;
+            font-weight: 600 !important;
+            min-width: 120px !important;
+        }
+        .interactive-schedule .event-details h4 {
+            margin: 0 0 5px 0 !important;
+            color: white !important;
+        }
+        .interactive-schedule .event-details p {
+            margin: 0 !important;
+            opacity: 0.8 !important;
+            font-size: 14px !important;
+        }
+        .interactive-schedule .event-type {
+            background: linear-gradient(135deg, #667eea, #764ba2) !important;
+            padding: 4px 12px !important;
+            border-radius: 20px !important;
+            font-size: 12px !important;
+            margin-top: 8px !important;
+            display: inline-block !important;
+        }
+    </style>
+    
+    <!-- Cache busting agressif -->
+    <script>
+        // Force complete cache refresh
+        if ('caches' in window) {
+            caches.keys().then(names => names.forEach(name => caches.delete(name)));
+        }
+        // Disable back/forward cache
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+        // Clear localStorage if any
+        try { localStorage.clear(); } catch(e) {}
+        try { sessionStorage.clear(); } catch(e) {}
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Meta Tags for Social Media -->
+    <meta property="og:title" content="Qiskit Fall Fest 2025 - University of Paris-Saclay">
+    <meta property="og:description" content="Join us for the most exciting quantum computing event in France. 4 days of workshops and hackathon celebrating 100 years of quantum mechanics.">
+    <meta property="og:url" content="https://your-vercel-domain.vercel.app">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Qiskit Fall Fest 2025 - University of Paris-Saclay">
+    <meta name="twitter:description" content="Join us for the most exciting quantum computing event in France. Free registration!">
+</head>
+<body class="is-preload">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/images/fall-fest-banner.webp" alt="Fall Fest 2025" class="nav-logo">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#speakers" class="nav-link">Speakers</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">Nov 17-20, 2025 • University of Paris-Saclay</span>
+                </div>
+                <h1 class="hero-title">
+                    Qiskit Fall Fest 2025
+                </h1>
+                <p class="hero-subtitle">
+                    Celebrating 100 years of quantum mechanics with cutting-edge workshops, inspiring talks, and collaborative innovation at one of France's premier research institutions.
+                </p>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <h3 class="countdown-title">Event starts in:</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#schedule" class="btn btn-primary">
+                        <span>View Schedule</span>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>Learn More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Fall Fest Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About the Fall Fest</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The Qiskit Fall Fest is a collection of quantum computing events around the world. This year's theme celebrates the 100th anniversary of quantum mechanics with cutting-edge workshops and collaborative innovation.</p>
+                    <p>Join us at the University of Paris-Saclay for an intensive 4-day journey into the quantum realm, featuring hands-on workshops, expert talks, and a competitive hackathon.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/Theme.png" alt="Quantum Theme" class="theme-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Organizers Section -->
+    <section id="team" class="team section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Team Organizers</h2>
+                <p class="section-description">Meet the passionate team behind this quantum computing celebration</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="assets/images/organizers/Van Binh VU.jpg" alt="Van Binh VU" class="avatar-image">
+                    </div>
+                    <div class="team-info">
+                        <h3>Van Binh VU</h3>
+                        <p class="team-bio">Quantum algorithm scientist | ex-CEA</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/van-binh-vu-7a8924250/" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/binhvuhp94" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="assets/images/organizers/Mamlouk Mohamed.jpeg" alt="Mamlouk Mohamed" class="avatar-image">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mamlouk Mohamed</h3>
+                        <p class="team-bio">PhD Student, C2N | Ingénieur Centralien</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/mamlouk-mohamed-4b597a20b/" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/mohamedmamlouk" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="assets/images/organizers/MUNA NUMAN.png" alt="MUNA NUMAN" class="avatar-image">
+                    </div>
+                    <div class="team-info">
+                        <h3>MUNA NUMAN</h3>
+                        <p class="team-bio">Rhodes Scholar | Researcher</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/muna-numan/" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/Munanom" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="assets/images/organizers/Ziwoong (Jim) Jang jpeg" alt="Ziwoong (Jim) Jang" class="avatar-image">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ziwoong (Jim) Jang</h3>
+                        <p class="team-bio">Pusan National University Undergraduate</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/ziwoong-jang-917967268" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/jjmain" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="assets/images/organizers/Viet-Anh Tran.jpeg" alt="Viet-Anh Tran" class="avatar-image">
+                    </div>
+                    <div class="team-info">
+                        <h3>Viet-Anh Tran</h3>
+                        <p class="team-bio">PhD Student @ University of Louvain</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/viet-anh-tran-ucl/" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/anhvtran" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IBM Quantum decoration for team section -->
+            <div class="team-decoration">
+                <img src="assets/images/IBM Quantum Logo.png" alt="IBM Quantum" class="team-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Schedule Section - NOUVELLE VERSION -->
+    <section id="schedule" class="interactive-schedule section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-description">4 days of intensive quantum computing workshops and hackathon</p>
+            </div>
+            
+            <div class="schedule-interactive">
+                <!-- Day Tabs -->
+                <div class="schedule-tabs">
+                    <button class="tab-button active" data-day="day1">
+                        <div class="tab-day">Day 1</div>
+                        <div class="tab-date">Nov 17</div>
+                        <div class="tab-theme">Foundations</div>
+                    </button>
+                    <button class="tab-button" data-day="day2">
+                        <div class="tab-day">Day 2</div>
+                        <div class="tab-date">Nov 18</div>
+                        <div class="tab-theme">Applications</div>
+                    </button>
+                    <button class="tab-button" data-day="day3">
+                        <div class="tab-day">Day 3</div>
+                        <div class="tab-date">Nov 19</div>
+                        <div class="tab-theme">Advanced</div>
+                    </button>
+                    <button class="tab-button" data-day="day4">
+                        <div class="tab-day">Day 4</div>
+                        <div class="tab-date">Nov 20</div>
+                        <div class="tab-theme">Hackathon</div>
+                    </button>
+                </div>
+
+                <!-- Day Content -->
+                <div class="schedule-content">
+                    <!-- Day 1 -->
+                    <div class="day-content active" id="day1">
+                        <div class="day-header">
+                            <h3>Day 1: Quantum Foundations</h3>
+                            <span class="date-badge">November 17, 2025</span>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">9:00 - 9:30</div>
+                                <div class="event-details">
+                                    <h4>Welcome & Registration</h4>
+                                    <p>Coffee and networking</p>
+                                    <span class="event-type">Opening</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">9:30 - 11:00</div>
+                                <div class="event-details">
+                                    <h4>Introduction to Quantum Computing</h4>
+                                    <p>Basic principles of quantum mechanics and quantum computation</p>
+                                    <span class="event-type">Workshop</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:15 - 12:30</div>
+                                <div class="event-details">
+                                    <h4>Getting Started with Qiskit</h4>
+                                    <p>Hands-on introduction to the Qiskit framework</p>
+                                    <span class="event-type">Lab</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:00 - 15:30</div>
+                                <div class="event-details">
+                                    <h4>Quantum Gates and Circuits</h4>
+                                    <p>Building your first quantum circuits</p>
+                                    <span class="event-type">Workshop</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">15:45 - 17:00</div>
+                                <div class="event-details">
+                                    <h4>Practice Session</h4>
+                                    <p>Apply what you've learned with guided exercises</p>
+                                    <span class="event-type">Practice</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="day-content" id="day2">
+                        <div class="day-header">
+                            <h3>Day 2: Quantum Applications</h3>
+                            <span class="date-badge">November 18, 2025</span>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">9:00 - 10:30</div>
+                                <div class="event-details">
+                                    <h4>Quantum Algorithms</h4>
+                                    <p>Exploring Shor's and Grover's algorithms</p>
+                                    <span class="event-type">Workshop</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:45 - 12:15</div>
+                                <div class="event-details">
+                                    <h4>Quantum Machine Learning</h4>
+                                    <p>Introduction to QML algorithms and applications</p>
+                                    <span class="event-type">Advanced</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:00 - 15:30</div>
+                                <div class="event-details">
+                                    <h4>Variational Quantum Algorithms</h4>
+                                    <p>QAOA and VQE implementations</p>
+                                    <span class="event-type">Lab</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">15:45 - 17:00</div>
+                                <div class="event-details">
+                                    <h4>Real Hardware Applications</h4>
+                                    <p>Running circuits on IBM Quantum devices</p>
+                                    <span class="event-type">Practice</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="day-content" id="day3">
+                        <div class="day-header">
+                            <h3>Day 3: Advanced Topics</h3>
+                            <span class="date-badge">November 19, 2025</span>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">9:00 - 10:30</div>
+                                <div class="event-details">
+                                    <h4>Quantum Error Correction</h4>
+                                    <p>Error correction codes and fault-tolerant computing</p>
+                                    <span class="event-type">Advanced</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:45 - 12:15</div>
+                                <div class="event-details">
+                                    <h4>Quantum Optimization</h4>
+                                    <p>Solving optimization problems with quantum computers</p>
+                                    <span class="event-type">Workshop</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:00 - 15:30</div>
+                                <div class="event-details">
+                                    <h4>Quantum Cryptography</h4>
+                                    <p>QKD and post-quantum cryptography</p>
+                                    <span class="event-type">Advanced</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">15:45 - 17:00</div>
+                                <div class="event-details">
+                                    <h4>Hackathon Preparation</h4>
+                                    <p>Team formation and project brainstorming</p>
+                                    <span class="event-type">Preparation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="day-content" id="day4">
+                        <div class="day-header">
+                            <h3>Day 4: Quantum Hackathon</h3>
+                            <span class="date-badge">November 20, 2025</span>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">9:00 - 9:30</div>
+                                <div class="event-details">
+                                    <h4>Hackathon Kickoff</h4>
+                                    <p>Challenge presentation and team finalization</p>
+                                    <span class="event-type">Opening</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">9:30 - 15:00</div>
+                                <div class="event-details">
+                                    <h4>Hackathon Development</h4>
+                                    <p>Build quantum applications and solve challenges</p>
+                                    <span class="event-type">Competition</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">15:00 - 16:30</div>
+                                <div class="event-details">
+                                    <h4>Project Presentations</h4>
+                                    <p>Teams present their quantum solutions</p>
+                                    <span class="event-type">Presentation</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:30 - 17:00</div>
+                                <div class="event-details">
+                                    <h4>Awards & Closing</h4>
+                                    <p>Prize ceremony and farewell</p>
+                                    <span class="event-type">Closing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="speakers section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Speakers</h2>
+                <p class="section-description">Learn from the leading experts in quantum computing</p>
+            </div>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-avatar">
+                        <img src="assets/images/speakers/placeholder-speaker.jpg" alt="Quantum Expert" class="speaker-image">
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dr. Quantum Expert</h3>
+                        <p class="speaker-role">Senior Quantum Researcher</p>
+                        <p class="speaker-bio">Leading expert in quantum error correction and fault-tolerant quantum computing.</p>
+                    </div>
+                </div>
+                <!-- More speakers can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Event Information</h3>
+                    <div class="footer-info">
+                        <p><strong>Dates:</strong> November 17-20, 2025</p>
+                        <p><strong>Location:</strong> University of Paris-Saclay</p>
+                        <p><strong>Format:</strong> In-person workshops and hackathon</p>
+                        <p><strong>Registration:</strong> Free</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>University of Paris-Saclay</h3>
+                    <div class="footer-info">
+                        <p>Bâtiment Bréguet</p>
+                        <p>3 Rue Joliot Curie</p>
+                        <p>91190 Gif-sur-Yvette, France</p>
+                        <p><strong>Phone:</strong> +33 1 69 15 60 00</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact & Links</h3>
+                    <div class="footer-info">
+                        <p><strong>Email:</strong> binhvuhp94@gmail.com</p>
+                        <div class="footer-links">
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="#hero">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                    <li><a href="#schedule">Schedule</a></li>
+                                    <li><a href="#speakers">Speakers</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://github.com/qiskit-community" target="_blank" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://twitter.com/Qiskit" target="_blank" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/qiskit/" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Qiskit Fall Fest - University of Paris-Saclay. All rights reserved.</p>
+                    <div class="footer-partners">
+                        <span>Powered by</span>
+                        <img src="assets/images/IBM Quantum Logo.png" alt="IBM Quantum" class="partner-logo">
+                        <span>and</span>
+                        <img src="assets/images/logo.png" alt="Qiskit" class="partner-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('2025-11-17T09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<div class="countdown-item"><span class="countdown-number">Event Started!</span></div>';
+            }
+        }
+
+        // Tab functionality for interactive schedule
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Site loaded - initializing interactive schedule');
+            
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const dayContents = document.querySelectorAll('.day-content');
+            
+            console.log(`📊 Found ${tabButtons.length} tab buttons and ${dayContents.length} day contents`);
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetDay = this.getAttribute('data-day');
+                    console.log(`🎯 Clicked on ${targetDay}`);
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    dayContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const targetContent = document.getElementById(targetDay);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        console.log(`✅ Switched to ${targetDay} successfully`);
+                    } else {
+                        console.log(`❌ Could not find content for ${targetDay}`);
+                    }
+                });
+            });
+            
+            // Start countdown
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            console.log('🎉 Interactive schedule initialized successfully');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

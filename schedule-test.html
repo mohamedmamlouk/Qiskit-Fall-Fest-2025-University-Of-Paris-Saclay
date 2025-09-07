@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f23;
+            color: white;
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .tab {
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab.active {
+            background: #667eea;
+        }
+        .content {
+            margin: 20px 0;
+            padding: 20px;
+            background: #222;
+            border-radius: 5px;
+        }
+        .day-content {
+            display: none;
+        }
+        .day-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Schedule Test - Click the tabs!</h1>
+    
+    <div class="tabs">
+        <button class="tab active" onclick="showDay('day1')">Day 1</button>
+        <button class="tab" onclick="showDay('day2')">Day 2</button>
+        <button class="tab" onclick="showDay('day3')">Day 3</button>
+        <button class="tab" onclick="showDay('day4')">Day 4</button>
+    </div>
+    
+    <div class="content">
+        <div id="day1" class="day-content active">
+            <h2>Day 1: Foundations</h2>
+            <p>9:00 - 9:30: Welcome & Registration</p>
+            <p>9:30 - 11:00: Introduction to Quantum Computing</p>
+            <p>11:15 - 12:30: Getting Started with Qiskit</p>
+        </div>
+        
+        <div id="day2" class="day-content">
+            <h2>Day 2: Applications</h2>
+            <p>9:00 - 10:30: Quantum Algorithms</p>
+            <p>10:45 - 12:15: Implementing Grover's Algorithm</p>
+            <p>14:00 - 15:30: Quantum Machine Learning</p>
+        </div>
+        
+        <div id="day3" class="day-content">
+            <h2>Day 3: Advanced</h2>
+            <p>9:00 - 10:30: Quantum Error Correction</p>
+            <p>10:45 - 12:15: Quantum Optimization</p>
+            <p>14:00 - 15:30: Industry Applications</p>
+        </div>
+        
+        <div id="day4" class="day-content">
+            <h2>Day 4: Hackathon</h2>
+            <p>9:00 - 9:30: Hackathon Kickoff</p>
+            <p>9:30 - 15:00: Hacking Time</p>
+            <p>15:00 - 16:30: Project Presentations</p>
+        </div>
+    </div>
+    
+    <script>
+        function showDay(dayId) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all content
+            document.querySelectorAll('.day-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Show corresponding content
+            document.getElementById(dayId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

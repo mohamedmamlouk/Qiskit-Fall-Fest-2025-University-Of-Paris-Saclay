@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background with Fall Fest theme and quantum circuit patterns */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(138, 43, 226, 0.8) 0%, rgba(30, 144, 255, 0.7) 25%, rgba(255, 20, 147, 0.6) 50%, rgba(0, 191, 255, 0.7) 75%, rgba(138, 43, 226, 0.8) 100%),
+        url('../images/fall-fest-banner.webp');
+    background-size: 400% 400%, cover;
+    background-position: 0% 50%, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    animation: gradientShift 20s ease infinite;
+    z-index: -3;
+}
+
+/* Quantum circuit overlay pattern */
+#bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Quantum gates as circles */
+        radial-gradient(circle at 20% 20%, rgba(255, 107, 157, 0.3) 2px, transparent 3px),
+        radial-gradient(circle at 80% 30%, rgba(78, 205, 196, 0.3) 2px, transparent 3px),
+        radial-gradient(circle at 40% 60%, rgba(255, 107, 157, 0.2) 3px, transparent 4px),
+        radial-gradient(circle at 70% 80%, rgba(78, 205, 196, 0.2) 2px, transparent 3px),
+        radial-gradient(circle at 10% 70%, rgba(255, 107, 157, 0.3) 2px, transparent 3px),
+        /* Quantum wire lines */
+        linear-gradient(90deg, transparent 18%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21%, transparent 23%),
+        linear-gradient(90deg, transparent 38%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 41%, transparent 43%),
+        linear-gradient(90deg, transparent 58%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 61%, transparent 63%),
+        linear-gradient(90deg, transparent 78%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 81%, transparent 83%);
+    background-size: 
+        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+        100% 20px, 100% 20px, 100% 20px, 100% 20px;
+    background-position: 
+        0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,
+        0% 20%, 0% 30%, 0% 60%, 0% 80%;
+    animation: quantumCircuitMove 25s linear infinite;
+    z-index: -2;
+}
+
+/* Fall Fest logo overlay */
+#bg::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 100px;
+    background: url('../images/fall-fest-sponsor.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.1;
+    animation: pulseGlow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%, center center; }
+    25% { background-position: 100% 25%, center top; }
+    50% { background-position: 100% 50%, center center; }
+    75% { background-position: 0% 75%, center bottom; }
+    100% { background-position: 0% 50%, center center; }
+}
+
+@keyframes quantumCircuitMove {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-10px) translateY(-5px); }
+    50% { transform: translateX(-20px) translateY(0); }
+    75% { transform: translateX(-10px) translateY(5px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { 
+        opacity: 0.05; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.15; 
+        transform: scale(1.02); 
+    }
+    100% { 
+        opacity: 0.05; 
+        transform: scale(1); 
+    }
+}
+
+/* Wrapper */
+#wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Fall Fest Badge */
+#header .fall-fest-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 150px;
+    height: auto;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+#header .fall-fest-badge img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+#header .fall-fest-badge:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+#header .logo {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+#header .logo:hover {
+    border-color: #ff6b9d;
+    box-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
+    transform: scale(1.1);
+}
+
+#header .logo .icon {
+    font-size: 2rem;
+    color: #ff6b9d;
+}
+
+#header .content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ff6b9d, #4ecdc4, #45b7d1);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease-in-out infinite;
+}
+
+#header .content h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#header .content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.event-details {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+}
+
+.event-details:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+#header nav {
+    margin-top: 2rem;
+}
+
+#header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+#header nav ul li a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+}
+
+#header nav ul li a:hover {
+    color: #ff6b9d;
+    border-color: #ff6b9d;
+    background: rgba(255, 107, 157, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.2);
+}
+
+/* Main Content */
+#main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#main article {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    display: none;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+#main article.active {
+    display: block;
+}
+
+#main article h2.major {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ff6b9d;
+    text-align: center;
+}
+
+#main article h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    color: #4ecdc4;
+}
+
+#main article p {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+/* Images */
+.image.main img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+/* Schedule Table */
+.schedule-container {
+    margin: 2rem 0;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table th {
+    background: rgba(255, 107, 157, 0.2);
+    font-weight: 600;
+    color: #ff6b9d;
+}
+
+.schedule-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Speakers Grid */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.speaker {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.speaker:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.speaker-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ff6b9d;
+}
+
+.speaker-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff6b9d;
+}
+
+.speaker-title {
+    font-weight: 600;
+    color: #4ecdc4;
+    margin-bottom: 1rem;
+}
+
+.speaker-bio {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.speaker-links a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.speaker-links a:hover {
+    color: #ff6b9d;
+}
+
+/* Organizers Grid */
+.organizers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.organizer {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.organizer:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.organizer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #4ecdc4;
+}
+
+.organizer-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #4ecdc4;
+}
+
+.organizer-title {
+    font-weight: 600;
+    color: #ff6b9d;
+    margin-bottom: 0.5rem;
+}
+
+.organizer-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.organizer-bio {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.organizer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.organizer-links a:hover {
+    color: #4ecdc4;
+}
+
+/* Registration */
+.registration-info,
+.registration-benefits,
+.registration-deadlines {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.registration-form-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.google-form-embed {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Contact */
+.contact-info,
+.venue-details,
+.transport-info,
+.contact-methods {
+    margin: 2rem 0;
+}
+
+.transport-info h4 {
+    color: #4ecdc4;
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* Sponsors */
+.sponsors-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.sponsor-logo {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sponsor-logo img {
+    max-width: 200px;
+    height: auto;
+    filter: brightness(1.2);
+}
+
+/* Footer */
+#footer {
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem 1rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    color: #ff6b9d;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #4ecdc4;
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6b9d;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom a {
+    color: #4ecdc4;
+    text-decoration: none;
+}
+
+/* Social Media Icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.icons a:hover {
+    border-color: #ff6b9d;
+    color: #ff6b9d;
+    background: rgba(255, 107, 157, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+ul li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #ff6b9d;
+    font-size: 0.8rem;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #ff6b9d;
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: rgba(255, 107, 157, 0.05);
+    border-radius: 0 15px 15px 0;
+    padding: 1.5rem 2rem;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    color: #4ecdc4;
+    font-weight: 600;
+}
+
+/* Links */
+a {
+    color: #4ecdc4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b9d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header .content h1 {
+        font-size: 2.5rem;
+    }
+    
+    #header .content h2 {
+        font-size: 1.4rem;
+    }
+    
+    #header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #header .fall-fest-badge {
+        top: 1rem;
+        right: 1rem;
+        width: 100px;
+    }
+    
+    #main {
+        padding: 1rem;
+    }
+    
+    #main article {
+        padding: 2rem 1.5rem;
+    }
+    
+    .speakers-grid,
+    .organizers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.5rem;
+    }
+    
+    .sponsors-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #header .content h1 {
+        font-size: 2rem;
+    }
+    
+    .event-details {
+        padding: 1rem;
+    }
+    
+    .speaker,
+    .organizer {
+        padding: 1.5rem;
+    }
+    
+    .registration-form-container iframe {
+        height: 600px;
+    }
+}
+
+/* Loading States */
+.is-preload * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* Print Styles */
+@media print {
+    #bg,
+    #header nav,
+    .google-form-embed {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    #main article {
+        background: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+}
