@@ -232,118 +232,368 @@
             </div>
             
             <div class="schedule-interactive">
+                <!-- Day Tabs (keep original design) -->
+                <div class="schedule-tabs">
+                    <button class="tab-button active" data-day="day1">
+                        <div class="tab-day">Day 1</div>
+                        <div class="tab-date">Monday</div>
+                        <div class="tab-theme">Program</div>
+                    </button>
+                    <button class="tab-button" data-day="day2">
+                        <div class="tab-day">Day 2</div>
+                        <div class="tab-date">Tuesday</div>
+                        <div class="tab-theme">Program</div>
+                    </button>
+                    <button class="tab-button" data-day="day3">
+                        <div class="tab-day">Day 3</div>
+                        <div class="tab-date">Wednesday</div>
+                        <div class="tab-theme">Program</div>
+                    </button>
+                    <button class="tab-button" data-day="day4">
+                        <div class="tab-day">Day 4</div>
+                        <div class="tab-date">Thursday</div>
+                        <div class="tab-theme">Program</div>
+                    </button>
+                    <button class="tab-button" data-day="day5">
+                        <div class="tab-day">Day 5</div>
+                        <div class="tab-date">Friday</div>
+                        <div class="tab-theme">Program</div>
+                    </button>
+                </div>
+
+                <!-- Day Content -->
                 <div class="schedule-content">
-                    <div class="schedule-table-wrapper">
-                        <table class="schedule-table" style="width:100%;border-collapse:collapse;">
-                            <thead>
-                                <tr>
-                                    <th style="border:1px solid #ddd;padding:8px;">Time</th>
-                                    <th style="border:1px solid #ddd;padding:8px;">Monday</th>
-                                    <th style="border:1px solid #ddd;padding:8px;">Tuesday</th>
-                                    <th style="border:1px solid #ddd;padding:8px;">Wednesday</th>
-                                    <th style="border:1px solid #ddd;padding:8px;">Thursday</th>
-                                    <th style="border:1px solid #ddd;padding:8px;">Friday</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">08:15-08:45</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Welcome at Université de Paris-Saclay</td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">08:45-09:00</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Presentation about Université de Paris-Saclay</td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">09:00-10:00</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Quantum mechanics foundations</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hardware company talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Noise &amp; Error Mitigation</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Quantum Error Correction</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Quantum machine learning</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">10:00-10:15</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">10:15-12:15</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hands-on Practice: Getting Started with Qiskit</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hardware company talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hands-on Practice: Noise &amp; Error Mitigation</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hands-on Practice: Quantum Error Correction</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hands-on Practice: Quantum machine learning</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">12:15-13:30</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Lunch time</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Lunch time</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Lunch time</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Lunch time</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Lunch time</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">13:30-14:30</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Variational algorithms : VQE, QAOA, and SQD</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hardware company talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">14:30-14:45</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">14:45-16:45</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hands-on Practice: Variational algorithms</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Hardware company talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Industry/Academica talk</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">16:45-17:00</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Coffee break</td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">17:00-18:00</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Visiting Labs/University</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Careers in Quantum &amp; Panel discussions</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Visiting Labs/University</td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Social games</td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                </tr>
-                                <tr>
-                                    <td style="border:1px solid #ddd;padding:8px;">18:00-19:00</td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Networking &amp; Apero time</td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;"></td>
-                                    <td style="border:1px solid #ddd;padding:8px;">Social games</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!-- Monday -->
+                    <div class="day-content active" id="day1">
+                        <div class="day-header">
+                            <h3>Monday</h3>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">08:15-08:45</div>
+                                <div class="event-details">
+                                    <h4>Welcome at Université de Paris-Saclay</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">08:45-09:00</div>
+                                <div class="event-details">
+                                    <h4>Presentation about Université de Paris-Saclay</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-details">
+                                    <h4>Quantum mechanics foundations</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Getting Started with Qiskit</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Variational algorithms : VQE, QAOA, and SQD</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-16:45</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Variational algorithms</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:45-17:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-details">
+                                    <h4>Visiting Labs/University</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="day-content" id="day2">
+                        <div class="day-header">
+                            <h3>Tuesday</h3>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-16:45</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:45-17:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-details">
+                                    <h4>Careers in Quantum &amp; Panel discussions</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">18:00-19:00</div>
+                                <div class="event-details">
+                                    <h4>Networking &amp; Apero time</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="day-content" id="day3">
+                        <div class="day-header">
+                            <h3>Wednesday</h3>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-details">
+                                    <h4>Noise &amp; Error Mitigation</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Noise &amp; Error Mitigation</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-16:45</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:45-17:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-details">
+                                    <h4>Visiting Labs/University</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="day-content" id="day4">
+                        <div class="day-header">
+                            <h3>Thursday</h3>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-details">
+                                    <h4>Quantum Error Correction</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Quantum Error Correction</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-16:45</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:45-17:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-details">
+                                    <h4>Social games</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="day-content" id="day5">
+                        <div class="day-header">
+                            <h3>Friday</h3>
+                        </div>
+                        <div class="events-timeline">
+                            <div class="event-item">
+                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-details">
+                                    <h4>Quantum machine learning</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Quantum machine learning</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-16:45</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:45-17:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">18:00-19:00</div>
+                                <div class="event-details">
+                                    <h4>Social games</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
