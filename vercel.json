@@ -12,7 +12,16 @@
     {
       "source": "/home",
       "destination": "/"
-    }
+  },
+  { "source": "/index-working.html", "destination": "/" },
+  { "source": "/index-cache-issue.html", "destination": "/" },
+  { "source": "/index-modern.html", "destination": "/" },
+  { "source": "/fall-fest-2025.html", "destination": "/" },
+  { "source": "/index-broken-cache.html", "destination": "/" },
+  { "source": "/index-problematique.html", "destination": "/" },
+  { "source": "/index-old-cache-problem.html", "destination": "/" },
+  { "source": "/index_simple.html", "destination": "/" },
+  { "source": "/new-index.html", "destination": "/" }
   ],
   "rewrites": [
     {
