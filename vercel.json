@@ -8,6 +8,16 @@
   ],
   "cleanUrls": true,
   "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/$",
+      "has": [
+        { "type": "header", "key": "user-agent", "value": "(?i)(mobile|android|iphone)" }
+      ],
+      "status": 307,
+      "dest": "/mobile"
+    }
+  ],
   "redirects": [
     {
       "source": "/home",
