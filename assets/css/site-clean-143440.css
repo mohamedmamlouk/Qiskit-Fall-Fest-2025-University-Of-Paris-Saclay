@@ -127,7 +127,12 @@ section:last-child {
     justify-content: flex-start;
     height: 160px;
 }
-
+.badge-img {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* centers the image and adds spacing */
+}
 .nav-brand {
     margin-right: var(--space-xl);
     font-family: var(--font-heading);
