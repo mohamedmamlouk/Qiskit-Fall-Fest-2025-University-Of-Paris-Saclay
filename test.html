@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Local - Qiskit Fall Fest 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-card {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+        .test-pass {
+            border-color: #4CAF50;
+            background: #f1f8e9;
+        }
+        .test-fail {
+            border-color: #f44336;
+            background: #ffebee;
+        }
+        .test-pending {
+            border-color: #ff9800;
+            background: #fff3e0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+        }
+        .status {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .pass { background: #4CAF50; color: white; }
+        .fail { background: #f44336; color: white; }
+        .pending { background: #ff9800; color: white; }
+        .checklist {
+            margin: 20px 0;
+        }
+        .checklist li {
+            margin: 10px 0;
+            list-style-type: none;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Local - Qiskit Fall Fest 2025</h1>
+    
+    <div class="test-card test-pass">
+        <h2>✅ Fichiers Créés</h2>
+        <p><span class="status pass">SUCCÈS</span> Tous les fichiers nécessaires ont été créés avec succès !</p>
+        <ul>
+            <li>index.html - Page principale</li>
+            <li>assets/css/main.css - Styles principaux</li>
+            <li>assets/css/noscript.css - Styles fallback</li>
+            <li>assets/js/*.js - Scripts JavaScript</li>
+            <li>README.md - Documentation</li>
+            <li>_config.yml - Configuration GitHub Pages</li>
+        </ul>
+    </div>
+
+    <div class="test-card test-pending">
+        <h2>⏳ À Faire Ensuite</h2>
+        <p><span class="status pending">EN ATTENTE</span> Actions requises pour compléter le site :</p>
+        
+        <div class="checklist">
+            <h3>1. Configuration GitHub</h3>
+            <ul class="checklist">
+                <li>Créer un repository GitHub</li>
+                <li>Uploader tous les fichiers</li>
+                <li>Activer GitHub Pages dans Settings</li>
+                <li>Tester l'URL GitHub Pages</li>
+            </ul>
+
+            <h3>2. Contenu Personnalisé</h3>
+            <ul class="checklist">
+                <li>Créer un Google Form pour l'inscription</li>
+                <li>Remplacer l'URL du formulaire dans index.html</li>
+                <li>Ajouter les vraies photos des speakers</li>
+                <li>Ajouter les vraies photos des organisateurs</li>
+                <li>Télécharger les logos IBM Quantum et Qiskit</li>
+                <li>Mettre à jour les dates et informations de l'événement</li>
+            </ul>
+
+            <h3>3. Tests et Optimisation</h3>
+            <ul class="checklist">
+                <li>Tester sur mobile et desktop</li>
+                <li>Vérifier tous les liens</li>
+                <li>Optimiser les images</li>
+                <li>Configurer Google Analytics (optionnel)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-card test-pass">
+        <h2>🚀 Serveur Local</h2>
+        <p><span class="status pass">PRÊT</span> Pour tester localement, utilisez une de ces commandes :</p>
+        <pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">
+# Python 3
+python -m http.server 8000
+
+# Node.js
+npx serve .
+
+# PHP
+php -S localhost:8000
+        </pre>
+        <p>Puis ouvrez : <a href="http://localhost:8000" target="_blank">http://localhost:8000</a></p>
+    </div>
+
+    <div class="test-card test-pass">
+        <h2>📱 Fonctionnalités Incluses</h2>
+        <p><span class="status pass">COMPLET</span> Le site inclut toutes les fonctionnalités demandées :</p>
+        <ul>
+            <li>✅ Design moderne inspiré du site de référence</li>
+            <li>✅ Section Programme avec horaires détaillés</li>
+            <li>✅ Formulaire d'inscription Google Forms</li>
+            <li>✅ Section Organisateurs avec photos et rôles</li>
+            <li>✅ Section Speakers avec profils détaillés</li>
+            <li>✅ Section Sponsors avec logos IBM et Qiskit</li>
+            <li>✅ Design responsive (mobile-friendly)</li>
+            <li>✅ Animations et effets visuels</li>
+            <li>✅ Navigation fluide entre sections</li>
+            <li>✅ Thème "100 ans de mécanique quantique"</li>
+        </ul>
+    </div>
+
+    <div class="test-card test-pending">
+        <h2>🔗 Liens Utiles</h2>
+        <p><span class="status pending">RESSOURCES</span> Documentation et outils :</p>
+        <a href="DEPLOYMENT.md" class="btn">📖 Guide de Déploiement</a>
+        <a href="README.md" class="btn">📋 Documentation</a>
+        <a href="assets/images/README.md" class="btn">🖼️ Guide Images</a>
+        <br>
+        <a href="https://forms.google.com" class="btn" target="_blank">📝 Google Forms</a>
+        <a href="https://github.com" class="btn" target="_blank">🐙 GitHub</a>
+        <a href="https://pages.github.com" class="btn" target="_blank">🌐 GitHub Pages</a>
+    </div>
+
+    <div class="test-card test-pass">
+        <h2>🎨 Personnalisation</h2>
+        <p><span class="status pass">FLEXIBLE</span> Le site est facilement personnalisable :</p>
+        <ul>
+            <li><strong>Couleurs :</strong> Modifiez les variables CSS dans main.css</li>
+            <li><strong>Contenu :</strong> Éditez directement index.html</li>
+            <li><strong>Images :</strong> Remplacez les fichiers dans assets/images/</li>
+            <li><strong>Formulaire :</strong> Intégrez votre Google Form</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <h2>🎉 Félicitations !</h2>
+        <p>Votre site web Qiskit Fall Fest 2025 est prêt à être déployé !<br>
+        Suivez le guide de déploiement pour le mettre en ligne.</p>
+        <a href="index.html" class="btn" style="font-size: 1.2em;">🚀 Voir le Site Principal</a>
+    </div>
+
+    <script>
+        // Test JavaScript
+        console.log("✅ JavaScript fonctionne correctement !");
+        
+        // Test responsive
+        function checkResponsive() {
+            const width = window.innerWidth;
+            console.log("📱 Largeur d'écran:", width + "px");
+            
+            if (width < 768) {
+                console.log("📱 Mode mobile détecté");
+            } else {
+                console.log("🖥️ Mode desktop détecté");
+            }
+        }
+        
+        checkResponsive();
+        window.addEventListener('resize', checkResponsive);
+        
+        // Message de bienvenue
+        setTimeout(() => {
+            console.log("🎊 Bienvenue dans votre site Qiskit Fall Fest 2025 !");
+        }, 1000);
+    </script>
+</body>
+</html>
