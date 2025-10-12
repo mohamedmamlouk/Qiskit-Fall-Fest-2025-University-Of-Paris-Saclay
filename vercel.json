@@ -12,7 +12,7 @@
     {
       "src": "/$",
       "has": [
-        { "type": "header", "key": "user-agent", "value": "(?i)(mobile|android|iphone)" }
+        { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
       ],
       "status": 307,
       "dest": "/mobile"
