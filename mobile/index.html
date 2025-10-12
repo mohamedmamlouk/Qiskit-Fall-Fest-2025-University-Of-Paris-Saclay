@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="../">
   <title>Qiskit Fall Fest 2025 — Mobile</title>
   <!-- Base styles (unchanged) -->
-  <link rel="stylesheet" href="../assets/css/site-clean-143440.css" />
+  <link rel="stylesheet" href="assets/css/site-clean-143440.css" />
   <!-- Mobile-only overrides -->
-  <link rel="stylesheet" href="../assets/css/mobile.css" />
+  <link rel="stylesheet" href="assets/css/mobile.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,24 +17,25 @@
   <div id="app-root"></div>
 
   <script>
-    // Fetch the existing index markup and inject it, so mobile.html mirrors the original content
-    // without modifying original files. Then mobile.css + mobile.js apply overrides/enhancements.
-    fetch('../index.html', { cache: 'no-store' })
+    // Mirror the original page content without modifying originals
+    fetch('index.html', { cache: 'no-store' })
       .then(r => r.text())
       .then(html => {
-        // Extract body inner content to avoid duplicating head/scripts
         const tmp = document.createElement('html');
         tmp.innerHTML = html;
         const body = tmp.querySelector('body');
-        document.getElementById('app-root').innerHTML = body ? body.innerHTML : html;
-        // Remove duplicate base script if present in injected content to avoid double-binding
-        const modern = document.querySelector('script[src="../assets/js/modern.js"]');
-        if (modern) modern.remove();
+        if (body) {
+          // Strip script tags from injected markup to avoid duplicates
+          body.querySelectorAll('script').forEach(s => s.remove());
+          document.getElementById('app-root').innerHTML = body.innerHTML;
+        } else {
+          document.getElementById('app-root').innerHTML = html;
+        }
       })
       .catch(console.error);
   </script>
 
   <!-- Mobile enhancements (does not touch original) -->
-  <script src="../assets/js/mobile.js"></script>
+  <script src="assets/js/mobile.js"></script>
 </body>
 </html>
