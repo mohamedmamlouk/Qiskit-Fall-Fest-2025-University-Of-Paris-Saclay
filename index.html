@@ -9,64 +9,47 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/site-clean-143440.css?v=20250907-154200">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    
-    <!-- Meta Tags for Social Media -->
+
+    <!-- Social Meta -->
     <meta property="og:title" content="Qiskit Fall Fest 2025 - University of Paris-Saclay">
     <meta property="og:description" content="Join us for the most exciting quantum computing event in France. 3 weeks of workshops, lectures, and hackathon celebrating 100 years of quantum mechanics.">
     <meta property="og:url" content="https://your-vercel-domain.vercel.app">
     <meta property="og:type" content="website">
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Qiskit Fall Fest 2025 - University of Paris-Saclay">
     <meta name="twitter:description" content="Join us for the most exciting quantum computing event in France. Free registration!">
-            <style>
-                    /* Countdown Timer Simple Style */
-                            .countdown-timer {
-                                display: flex;
-                                justify-content: center;
-                                gap: 1.2rem;
-                                font-size: 1.5rem;
-                                font-weight: 600;
-                                color: #7c3aed;
-                                background: rgba(255,255,255,0.7);
-                                border-radius: 1.2rem;
-                                padding: 0.8rem 1.2rem;
-                                margin: 2rem auto 0 auto;
-                                box-shadow: 0 2px 12px rgba(124,58,237,0.08);
-                                max-width: 95vw;
-                                flex-wrap: wrap;
-                            }
-                            .countdown-timer span {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                min-width: 55px;
-                            }
-                            .countdown-timer .label {
-                                font-size: 0.9rem;
-                                color: #444;
-                                font-weight: 400;
-                                margin-top: 0.2rem;
-                            }
-                            @media (max-width: 600px) {
-                                .countdown-timer {
-                                    font-size: 1rem;
-                                    gap: 0.7rem;
-                                    padding: 0.5rem 0.5rem;
-                                    border-radius: 0.7rem;
-                                }
-                                .countdown-timer span {
-                                    min-width: 40px;
-                                }
-                            }
-            </style>
+
+    <style>
+        /* Countdown Timer Simple Style */
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #7c3aed;
+            background: rgba(255,255,255,0.7);
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            margin: 2rem auto 0 auto;
+            box-shadow: 0 2px 12px rgba(124,58,237,0.08);
+            max-width: 95vw;
+            flex-wrap: wrap;
+        }
+        .countdown-timer span { display: flex; flex-direction: column; align-items: center; min-width: 55px; }
+        .countdown-timer .label { font-size: 0.9rem; color: #444; font-weight: 400; margin-top: 0.2rem; }
+        @media (max-width: 600px) {
+            .countdown-timer { font-size: 1rem; gap: 0.7rem; padding: 0.5rem 0.5rem; border-radius: 0.7rem; }
+            .countdown-timer span { min-width: 40px; }
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -93,7 +76,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">        
+    <section id="hero" class="hero">
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-text">Nov 17-21, 2025 • University of Paris-Saclay</span>
@@ -102,8 +85,8 @@
                 Qiskit Fall Fest
                 <span class="hero-year">2025</span>
             </h1>
-                <div class="hero-subtitle" style="margin-bottom:2.5rem;">
-                    <img src="assets/images/Text_Theme_02.png" alt="100 Years of Quantum Mechanics" style="max-width:340px;width:100%;height:auto;display:block;margin:0 auto;">
+            <div class="hero-subtitle" style="margin-bottom:2.5rem;">
+                <img src="assets/images/Text_Theme_02.png" alt="100 Years of Quantum Mechanics" style="max-width:340px;width:100%;height:auto;display:block;margin:0 auto;">
             </div>
             <!-- Countdown Timer -->
             <div class="countdown-container">
@@ -118,7 +101,7 @@
         </div>
     </section>
 
-    <!-- About Section (now separate) -->
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">About the Fall Fest</h2>
@@ -137,17 +120,15 @@
         </div>
     </section>
 
-    
-
     <!-- Interactive Schedule Section -->
     <section id="schedule" class="interactive-schedule section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Program of the event</h2>
             </div>
-            
+
             <div class="schedule-interactive">
-                <!-- Day Tabs (keep original design) -->
+                <!-- Day Tabs -->
                 <div class="schedule-tabs">
                     <button class="tab-button active" data-day="day1">
                         <div class="tab-day">Day 1</div>
@@ -185,31 +166,37 @@
                         </div>
                         <div class="events-timeline">
                             <div class="event-item">
-                                <div class="event-time">08:15-08:45</div>
-                                <div class="event-details">
-                                    <h4>Welcome at Université de Paris-Saclay</h4>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-time">08:45-09:00</div>
+                                <div class="event-time">08:30-08:45</div>
                                 <div class="event-details">
                                     <h4>Presentation about Université de Paris-Saclay</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-time">08:45-09:45</div>
                                 <div class="event-details">
                                     <h4>Quantum mechanics foundations</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-time">09:45-10:00</div>
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-time">10:00-11:00</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Getting Started with Qiskit</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:00-11:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:15-12:15</div>
                                 <div class="event-details">
                                     <h4>Hands-on Practice: Getting Started with Qiskit</h4>
                                 </div>
@@ -235,7 +222,7 @@
                             <div class="event-item">
                                 <div class="event-time">14:45-15:45</div>
                                 <div class="event-details">
-                                    <h4>Hands-on Practice: Variational Algorithms</h4>
+                                    <h4>Hands-on Practice: Variational algorithms</h4>
                                 </div>
                             </div>
                             <div class="event-item">
@@ -247,13 +234,7 @@
                             <div class="event-item">
                                 <div class="event-time">16:00-17:00</div>
                                 <div class="event-details">
-                                    <h4>Hands-on Practice: Variational Algorithms</h4>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-time">17:00-18:00</div>
-                                <div class="event-details">
-                                    <h4>Visiting Labs/University</h4>
+                                    <h4>Hands-on Practice: Variational algorithms</h4>
                                 </div>
                             </div>
                         </div>
@@ -266,33 +247,45 @@
                         </div>
                         <div class="events-timeline">
                             <div class="event-item">
-                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-time">08:45-09:45</div>
                                 <div class="event-details">
-                                    <h4>Hardware company talk</h4>
+                                    <h4>Noise &amp; Error Mitigation</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-time">09:45-10:00</div>
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-time">10:00-11:00</div>
                                 <div class="event-details">
-                                    <h4>Hardware company talk</h4>
+                                    <h4>Hands-on Practice: Noise &amp; Error Mitigation</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:00-11:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hands-on Practice: Noise &amp; Error Mitigation</h4>
                                 </div>
                             </div>
                             <div class="event-item">
                                 <div class="event-time">12:15-13:30</div>
                                 <div class="event-details">
-                                    <h4>Lunch time</h4>
+                                    <h4>Lunch time (sandwich concert)</h4>
                                 </div>
                             </div>
                             <div class="event-item">
                                 <div class="event-time">13:30-14:30</div>
                                 <div class="event-details">
-                                    <h4>Hardware company talk</h4>
+                                    <h4>Visiting Labs/University</h4>
                                 </div>
                             </div>
                             <div class="event-item">
@@ -304,31 +297,31 @@
                             <div class="event-item">
                                 <div class="event-time">14:45-15:45</div>
                                 <div class="event-details">
-                                    <h4>Hardware Company Talk</h4>
+                                    <h4>Quantum Error Correction</h4>
                                 </div>
                             </div>
                             <div class="event-item">
                                 <div class="event-time">15:45-16:00</div>
                                 <div class="event-details">
-                                    <h4>Coffe Break </h4>
+                                    <h4>Coffee break</h4>
                                 </div>
                             </div>
                             <div class="event-item">
                                 <div class="event-time">16:00-17:00</div>
                                 <div class="event-details">
-                                    <h4> Hardware Company Talk </h4></h4>
+                                    <h4>Hands-on Practice: Quantum Error Correction</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-time">17:00-17:15</div>
                                 <div class="event-details">
-                                    <h4>Careers in Quantum &amp; Panel discussions</h4>
+                                    <h4>Coffee break</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">18:00-19:00</div>
+                                <div class="event-time">17:15-18:15</div>
                                 <div class="event-details">
-                                    <h4>Networking &amp; Apero time</h4>
+                                    <h4>Hands-on Practice: Quantum Error Correction</h4>
                                 </div>
                             </div>
                         </div>
@@ -341,21 +334,33 @@
                         </div>
                         <div class="events-timeline">
                             <div class="event-item">
-                                <div class="event-time">09:00-10:00</div>
+                                <div class="event-time">08:45-09:45</div>
                                 <div class="event-details">
-                                    <h4>Noise &amp; Error Mitigation</h4>
+                                    <h4>Industry/Academica talk</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:00-10:15</div>
+                                <div class="event-time">09:45-10:00</div>
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">10:15-12:15</div>
+                                <div class="event-time">10:00-11:00</div>
                                 <div class="event-details">
-                                    <h4>Hands-on Practice: Noise &amp; Error Mitigation</h4>
+                                    <h4>Industry/Academica talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:00-11:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Industry/Academica talk</h4>
                                 </div>
                             </div>
                             <div class="event-item">
@@ -395,9 +400,15 @@
                                 </div>
                             </div>
                             <div class="event-item">
-                                <div class="event-time">17:00-18:00</div>
+                                <div class="event-time">17:00-17:15</div>
                                 <div class="event-details">
-                                    <h4>Visiting Labs/University</h4>
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:15-18:15</div>
+                                <div class="event-details">
+                                    <h4>Careers in Quantum &amp; Panel discussions (for software companies)</h4>
                                 </div>
                             </div>
                         </div>
@@ -411,30 +422,42 @@
                         <div class="events-timeline">
                             <div class="event-item">
                                 <div class="event-time">09:00-10:00</div>
-                                <div class="event-details">
-                                    <h4>Quantum Error Correction</h4>
+                                <!-- Thursday -->
+                                <div class="day-content" id="day4">
                                 </div>
                             </div>
                             <div class="event-item">
                                 <div class="event-time">10:00-10:15</div>
-                                <div class="event-details">
-                                    <h4>Coffee break</h4>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-time">10:15-12:15</div>
-                                <div class="event-details">
-                                    <h4>Hands-on Practice: Quantum Error Correction</h4>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-time">12:15-13:30</div>
-                                <div class="event-details">
-                                    <h4>Lunch time</h4>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-time">13:30-14:30</div>
+                                        <div class="event-item">
+                                            <div class="event-time">08:45-09:45</div>
+                                            <div class="event-details">
+                                                <h4>Industry/Academica talk</h4>
+                                            </div>
+                                        </div>
+                                        <div class="event-item">
+                                            <div class="event-time">09:45-10:00</div>
+                                            <div class="event-details">
+                                                <h4>Coffee break</h4>
+                                            </div>
+                                        </div>
+                                        <div class="event-item">
+                                            <div class="event-time">10:00-11:00</div>
+                                            <div class="event-details">
+                                                <h4>Industry/Academica talk</h4>
+                                            </div>
+                                        </div>
+                                        <div class="event-item">
+                                            <div class="event-time">11:00-11:15</div>
+                                            <div class="event-details">
+                                                <h4>Coffee break</h4>
+                                            </div>
+                                        </div>
+                                        <div class="event-item">
+                                            <div class="event-time">11:15-12:15</div>
+                                            <div class="event-details">
+                                                <h4>Industry/Academica talk</h4>
+                                            </div>
+                                        </div>
                                 <div class="event-details">
                                     <h4>Industry/Academica talk</h4>
                                 </div>
@@ -444,7 +467,7 @@
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
                                 </div>
-                            </div>
+                                                <h4>Visiting Labs/University or Social games</h4>
                             <div class="event-item">
                                 <div class="event-time">14:45-15:45</div>
                                 <div class="event-details">
@@ -456,8 +479,8 @@
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
                                 </div>
-                            </div>
-                             <div class="event-item">
+                                                <h4>Quantum machine learning</h4>
+                            <div class="event-item">
                                 <div class="event-time">16:00-17:00</div>
                                 <div class="event-details">
                                     <h4>Industry/Academica talk</h4>
@@ -466,11 +489,23 @@
                             <div class="event-item">
                                 <div class="event-time">17:00-18:00</div>
                                 <div class="event-details">
-                                    <h4>Social games</h4>
-                                </div>
-                            </div>
-                        </div>
+                                            <div class="event-time">16:00-17:00</div>
+                                            <div class="event-details">
+                                                <h4>Hands-on Practice: Quantum machine learning</h4>
+                                            </div>
                     </div>
+                                        <div class="event-item">
+                                            <div class="event-time">17:00-17:15</div>
+                                            <div class="event-details">
+                                                <h4>Coffee break</h4>
+                                            </div>
+                                        </div>
+                                        <div class="event-item">
+                                            <div class="event-time">17:15-18:15</div>
+                                            <div class="event-details">
+                                                <h4>Hands-on Practice: Quantum machine learning</h4>
+                                            </div>
+                                        </div>
 
                     <!-- Friday -->
                     <div class="day-content" id="day5">
@@ -520,7 +555,7 @@
                                     <h4>Industry/Academica talk</h4>
                                 </div>
                             </div>
-                             <div class="event-item">
+                            <div class="event-item">
                                 <div class="event-time">15:45-16:00</div>
                                 <div class="event-details">
                                     <h4>Coffee break</h4>
@@ -545,7 +580,7 @@
             <div class="section-header">
                 <h2 class="section-title">Featured Speakers</h2>
             </div>
-            <!-- Placeholder grid without days, names, photos, or descriptions -->
+            <!-- Placeholder grid -->
             <div class="speakers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
                 <div class="speaker-card" style="background:#fff;border:1px solid #eee;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,0.04);">
                     <div aria-hidden="true" style="width:120px;height:120px;border-radius:50%;background:#f1f1f5;margin:0 auto 12px;"></div>
@@ -578,78 +613,113 @@
     <!-- Registration Section -->
     <section id="register" class="register section">
         <div class="container">
-                <img src="assets/images/Badge_03.png" alt="Badge Fall Fest" class="badge-img">
+            <img src="assets/images/Badge_03.png" alt="Badge Fall Fest" class="badge-img">
             <div class="section-header">
                 <h2 class="section-title">Register Now</h2>
                 <p class="section-description">Join us for this incredible quantum computing journey. Limited spots available!</p>
             </div>
             
             <div class="register-content">
-                <div class="register-info">
-                    <div class="register-highlights">
+                    <!-- Friday -->
+                    <div class="day-content" id="day5">
                         <h3>What's Included</h3>
                         <div class="highlights-grid">
                             <div class="highlight-item">
                                 <strong>Free Registration</strong>
-                                <span>Complete access to all workshops and events</span>
+                            <div class="event-item">
+                                <div class="event-time">08:45-09:45</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <strong>Community Access</strong>
-                                <span>Join our exclusive quantum computing community</span>
+                            <div class="event-item">
+                                <div class="event-time">09:45-10:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <strong>Certificate</strong>
-                                <span>Official completion</span>
+                            <div class="event-item">
+                                <div class="event-time">10:00-11:00</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="event-item">
+                                <div class="event-time">11:00-11:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">11:15-12:15</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">12:15-13:30</div>
+                                <div class="event-details">
+                                    <h4>Lunch time</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">13:30-14:30</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:30-14:45</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">14:45-15:45</div>
+                                <div class="event-details">
+                                    <h4>Hardware company talk</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">15:45-16:00</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">16:00-17:00</div>
+                                <div class="event-details">
+                                    <h4>Careers in Quantum &amp; Panel discussions (for hardware companies)</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:00-17:15</div>
+                                <div class="event-details">
+                                    <h4>Coffee break</h4>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">17:15-18:15</div>
+                                <div class="event-details">
+                                    <h4>Networking &amp; Apero time</h4>
+                                </div>
+                            </div>
+                    With ambitious roadmaps toward fault-tolerant quantum systems, scalable hardware, and ever-improving software performance, IBM is committed to making quantum computing a usable tool for solving real-world problems.
+                    </p>
                 </div>
                 
-                <div class="register-form">
-                    <div class="form-container">
-                        <h3>Ready to Join?</h3>
-                        <p>Register now to secure your spot in Fall Fest 2025!</p>
-                        
-                        <a href="https://forms.gle/7bdXNq3SfWm1XCRG9" 
-                           class="btn btn-primary btn-large" 
-                           target="_blank">
-                            Register Now
-                        </a>
-                        
-                        <div class="registration-note">
-                            <p>Questions? Contact us at <a href="mailto:binhvuhp94@gmail.com">binhvuhp94@gmail.com</a></p>
-                        </div>
-                    </div>
+                <div class="sponsor-card" style="background:#fff;border:1px solid #eee;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,0.04);text-align:center;">
+                    <img src="assets/images/paris_saclay.jpg" alt="Université Paris-Saclay logo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;">
+                    <h3 style="font-size:1.1rem;font-weight:600;color:#333;margin:8px 0 6px;">Université Paris-Saclay</h3>
+                    <p style="font-size:0.9rem;color:#666;line-height:1.5;margin:0;">Université Paris-Saclay is a central pillar in France’s quantum science ecosystem.
+                    Through Quantum-Saclay, 
+                    the university brings together physicists, mathematicians, engineers, computer scientists and more in a collaborative space committed to both foundational theory and cutting-edge quantum technologies. 
+                    With over forty research groups internationally recognized in areas such as quantum simulation, photonics, sensor technologies, and error correction, 
+                    Paris-Saclay not only trains the next generation of quantum researchers but also fosters academic-industrial partnerships to turn quantum ideas into impactful innovations.</p>
                 </div>
             </div>
         </div>
-    </section>
-
-<!-- Sponsors Section -->
-<section id="sponsors" class="sponsors section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Our Partners & Sponsors</h2>
-        </div>
-        <div class="speakers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
-            
-            <div class="sponsor-card" style="background:#fff;border:1px solid #eee;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,0.04);text-align:center;">
-                <img src="https://via.placeholder.com/120" alt="Tech Corp Logo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;">
-                <h3 style="font-size:1.1rem;font-weight:600;color:#333;margin:8px 0 6px;">Qiskit Community</h3>
-            </div>
-            
-            <div class="sponsor-card" style="background:#fff;border:1px solid #eee;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,0.04);text-align:center;">
-                <img src="https://via.placeholder.com/120" alt="Global Industries Logo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;">
-                <h3 style="font-size:1.1rem;font-weight:600;color:#333;margin:8px 0 6px;">IBM Quantum</h3>
-            </div>
-            
-            <div class="sponsor-card" style="background:#fff;border:1px solid #eee;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,0.04);text-align:center;">
-                <img src="main/assets/imagesLogo_Université_Paris-Saclay_(ComUE).svg.png" alt="Innovation Labs Logo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;">
-                <h3 style="font-size:1.1rem;font-weight:600;color:#333;margin:8px 0 6px;">Université Paris-Saclay</h3>
-            </div>    
-        </div>
-    </div>
-<!-- Become a Sponsor CTA -->
+        <!-- Become a Sponsor CTA -->
         <div class="sponsor-cta" style="text-align:center;margin-top:3rem;">
             <h3>Interested in Sponsoring?</h3>
             <p>Join us in supporting the next generation of quantum computing professionals</p>
@@ -657,12 +727,9 @@
                 Become a Sponsor
             </a>
         </div>
-    </div>
-</section>
+    </section>
 
-    
-<!-- Team Organizers Section -->
-        <!-- NOUVELLE SECTION TEAM ORGANIZERS -->
+    <!-- Team Organizers Section -->
     <section id="team" class="team-organizers section">
         <div class="container">
             <div class="section-header">
@@ -678,8 +745,8 @@
                         <img src="assets/images/organizers/VU Van Binh.jpeg" alt="Van Binh VU" class="avatar-image">
                     </div>
                     <div class="team-info">
-                        <h3>Dr.Van Binh VU</h3>
-                        <p class="team-bio">Team Leader | Quantum Algorithm Scientist | Graduate PhD | Former Université Paris-Saclay & CEA</p>
+                        <h3>Van Binh VU</h3>
+                        <p class="team-bio">Quantum algorithm scientist | Quantum many-body theorist | ex-CEA</p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/van-binh-vu-a54a1a1a0/" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/vbinvu68" target="_blank" class="social-link">GitHub</a>
@@ -693,7 +760,7 @@
                     </div>
                     <div class="team-info">
                         <h3>Mamlouk Mohamed</h3>
-                        <p class="team-bio">PhD student | Centralian Engineer | C2N, CNRS | Former CentralSuppélec, France</p>
+                        <p class="team-bio">PhD Student, C2N | Ingénieur Centralien</p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/mamlouk-mohamed-4b597a20b/" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/mohamedmamlouk" target="_blank" class="social-link">GitHub</a>
@@ -707,7 +774,7 @@
                     </div>
                     <div class="team-info">
                         <h3>MUNA NUMAN</h3>
-                        <p class="team-bio"> MSc Quantum Technology @University of Oxford | Rhodes Scholar</p>
+                        <p class="team-bio">Rhodes Scholar| MSc Quantum Technology @University of Oxford </p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/muna-numan/" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/Munanom" target="_blank" class="social-link">GitHub</a>
@@ -721,7 +788,7 @@
                     </div>
                     <div class="team-info">
                         <h3>Ziwoong (Jim) Jang</h3>
-                        <p class="team-bio">PhD Candidate | Qiskit Advocate | Former Pusan National University | KAIST, South Korea </p>
+                        <p class="team-bio">Pusan National University Undergraduate</p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/ziwoong-jang-917967268" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/jjmain" target="_blank" class="social-link">GitHub</a>
@@ -735,40 +802,42 @@
                     </div>
                     <div class="team-info">
                         <h3>Viet-Anh Tran</h3>
-                        <p class="team-bio"> PhD student | Former ICTP, Italy | University of Louvain, Belgium</p>
+                        <p class="team-bio">PhD Student @ University of Louvain</p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/viet-anh-tran-ucl/" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/anhvtran" target="_blank" class="social-link">GitHub</a>
                         </div>
                     </div>
                 </div>
-                  <div class="team-card">
+                
+                <div class="team-card">
                     <div class="team-avatar">
                         <img src="assets/images/Rudraksh.jpeg" alt="Rudraksh Sharma" class="avatar-image">
                     </div>
                     <div class="team-info">
                         <h3>Rudraksh Sharma </h3>
-                        <p class="team-bio">Qiskit Advocate | MSc Physics @ NSUT Delhi India </p>
+                        <p class="team-bio">Qiskit Advocate | MSc Physics @ NSUT Delhi India</p>
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/rudraksh-sharma2023" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="www.linkedin.com/in/rudraksh-sharma2023" target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/Rudra1x" target="_blank" class="social-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                       <div class="team-card">
+                <div class="team-card">
                     <div class="team-avatar">
                         <img src="assets/images/Poonam.jpeg" alt="Poonam" class="avatar-image">
                     </div>
                     <div class="team-info">
-                        <h3>Dr.Poonam Kumari </h3>
+                        <h3>Poonam Kumari </h3>
                         <p class="team-bio">Post doctoral Research Fellow @ Institute of Theoretical Physics CEA Paris Saclay</p>
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/poonam-kumari-745612223" target="_blank" class="social-link">LinkedIn</a>
-                
+                            <a href="www.linkedin.com/in/poonam-kumari-745612223" target="_blank" class="social-link">LinkedIn</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- New organizer from upstream -->
                 <div class="team-card">
                     <div class="team-avatar">
                         <img src="assets/images/organizers/Sadiya.jpeg" alt="sadiya" class="avatar-image">
@@ -777,24 +846,12 @@
                         <h3>Sadiya Ansari </h3>
                         <p class="team-bio">Undergraduate Student in AI & Data Science| Anjuman College of Engineering and Technology, India</p>
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/sadiyaansari2324 " target="_blank" class="social-link">LinkedIn</a>
+                            <a href="www.linkedin.com/in/sadiyaansari2324 " target="_blank" class="social-link">LinkedIn</a>
                             <a href="https://github.com/sadieea" target="_blank" class="social-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                 <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="assets/images/organizers/Le.png" alt="LeDuc" class="avatar-image">
-                    </div>
-                    <div class="team-info">
-                        <h3>Le Duc Truyen </h3>
-                        <p class="team-bio">PhD student | Quantum computing and theoretical physics researcher</p>
-                        <div class="team-social">
-                            <a href="https://www.linkedin.com/in/leductruyen3798/" target="_blank" class="social-link">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -825,14 +882,10 @@
                         </div>
                         
                         <div class="venue-actions">
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=LE+LUMEN,8+Avenue+des+sciences,91190+Gif-sur-Yvette,France" 
-                               target="_blank" 
-                               class="btn btn-secondary">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=LE+LUMEN,8+Avenue+des+sciences,91190+Gif-sur-Yvette,France" target="_blank" class="btn btn-secondary">
                                 Get Directions
                             </a>
-                            <a href="https://www.destination-paris-saclay.com/fr/fiche/equipement/le-lumen-gif-sur-yvette_TFO6737489/" 
-                               target="_blank" 
-                               class="btn btn-outline">
+                            <a href="https://www.destination-paris-saclay.com/fr/fiche/equipement/le-lumen-gif-sur-yvette_TFO6737489/" target="_blank" class="btn btn-outline">
                                 Venue Website
                             </a>
                         </div>
