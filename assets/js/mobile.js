@@ -40,6 +40,54 @@
     document.head.appendChild(style);
   }
 
+  function initCountdown(){
+    const el = document.getElementById('countdown');
+    if(!el) return;
+    const eventDate = new Date('2025-11-17T09:00:00');
+    function update(){
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) { el.innerHTML = 'Event Started!'; return; }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff/(1000*60*60)) % 24);
+      const m = Math.floor((diff/(1000*60)) % 60);
+      const s = Math.floor((diff/1000) % 60);
+      const set = (id,val)=>{ const n=document.getElementById(id); if(n) n.textContent=String(val).padStart(2,'0'); };
+      set('days', d); set('hours', h); set('minutes', m); set('seconds', s);
+    }
+    update();
+    setInterval(update, 1000);
+  }
+
+  function initScheduleTabs(){
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const dayContents = document.querySelectorAll('.day-content');
+    if(!tabButtons.length || !dayContents.length) return;
+    const animate = ()=>{
+      const activeEvents = document.querySelectorAll('.day-content.active .event-item');
+      activeEvents.forEach((event, index)=>{
+        event.style.opacity='0';
+        event.style.transform='translateY(20px)';
+        setTimeout(()=>{
+          event.style.transition='all 0.3s ease';
+          event.style.opacity='1';
+          event.style.transform='translateY(0)';
+        }, index*100);
+      });
+    };
+    tabButtons.forEach(btn=>{
+      btn.addEventListener('click', function(){
+        const targetDay = this.getAttribute('data-day');
+        tabButtons.forEach(b=>b.classList.remove('active'));
+        dayContents.forEach(c=>c.classList.remove('active'));
+        this.classList.add('active');
+        const panel = document.getElementById(targetDay);
+        if(panel){ panel.classList.add('active'); setTimeout(animate,50); }
+      });
+    });
+    animate();
+  }
+
   // Run after injected content arrives (in mobile/index.html we fetch base HTML)
   const readyInterval = setInterval(()=>{
     if(document.getElementById('nav-toggle') && document.getElementById('nav-menu')){
@@ -47,6 +95,8 @@
       initMobileMenu();
       initSmoothScroll();
       enhanceImages();
+      initCountdown();
+      initScheduleTabs();
     }
   }, 50);
 })();
