@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qiskit Fall Fest 2025 — Mobile</title>
+  <!-- Base styles (unchanged) -->
+  <link rel="stylesheet" href="../assets/css/site-clean-143440.css" />
+  <!-- Mobile-only overrides -->
+  <link rel="stylesheet" href="../assets/css/mobile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- We include the same HTML as root index by embedding it via server path assumptions is risky.
+       Instead, maintain an independent copy kept minimal: we rely on the same sections/ids. -->
+  <div id="app-root"></div>
+
+  <script>
+    // Fetch the existing index markup and inject it, so mobile.html mirrors the original content
+    // without modifying original files. Then mobile.css + mobile.js apply overrides/enhancements.
+    fetch('../index.html', { cache: 'no-store' })
+      .then(r => r.text())
+      .then(html => {
+        // Extract body inner content to avoid duplicating head/scripts
+        const tmp = document.createElement('html');
+        tmp.innerHTML = html;
+        const body = tmp.querySelector('body');
+        document.getElementById('app-root').innerHTML = body ? body.innerHTML : html;
+        // Remove duplicate base script if present in injected content to avoid double-binding
+        const modern = document.querySelector('script[src="../assets/js/modern.js"]');
+        if (modern) modern.remove();
+      })
+      .catch(console.error);
+  </script>
+
+  <!-- Mobile enhancements (does not touch original) -->
+  <script src="../assets/js/mobile.js"></script>
+</body>
+</html>
