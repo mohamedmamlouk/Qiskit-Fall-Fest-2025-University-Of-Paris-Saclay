@@ -15,6 +15,13 @@
         { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
       ],
       "dest": "/mobile"
+    },
+    {
+      "src": "/index\\.html$",
+      "has": [
+        { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
+      ],
+      "dest": "/mobile"
     }
   ],
   "redirects": [
