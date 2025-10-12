@@ -8,22 +8,7 @@
   ],
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/$",
-      "has": [
-        { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
-      ],
-      "dest": "/mobile"
-    },
-    {
-      "src": "/index\\.html$",
-      "has": [
-        { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
-      ],
-      "dest": "/mobile"
-    }
-  ],
+  
   "redirects": [
     {
       "source": "/home",
@@ -40,6 +25,13 @@
   { "source": "/new-index.html", "destination": "/" }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "header", "key": "user-agent", "value": "([Mm]obile|Android|iPhone|iPad|iPod)" }
+      ],
+      "destination": "/mobile"
+    },
     {
       "source": "/",
       "destination": "/index.html"
