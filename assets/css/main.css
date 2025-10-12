@@ -468,6 +468,12 @@ body {
 .organizer-links a:hover {
     color: #4ecdc4;
 }
+.badge-img {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* centers the image and adds spacing */
+}
 
 /* Registration */
 .registration-info,
