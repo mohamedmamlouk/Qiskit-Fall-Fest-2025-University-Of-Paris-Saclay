@@ -158,22 +158,6 @@ section:last-child {
     gap: var(--space-xl);
 }
 
-/* Mobile toggle (hidden by default) */
-.nav-toggle {
-    display: none;
-    margin-left: auto;
-    padding: 8px;
-    cursor: pointer;
-}
-.nav-toggle .bar {
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: #fff;
-    border-radius: 2px;
-    margin: 5px 0;
-}
-
 .nav-link {
     color: var(--gray);
     text-decoration: none;
@@ -617,7 +601,6 @@ section:last-child {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-    html { overflow-x: hidden; }
 
 @keyframes slideInLeft {
     from {
@@ -643,30 +626,6 @@ section:last-child {
 
 /* Modern Responsive */
 @media (max-width: 768px) {
-    /* Mobile Navbar */
-    .nav-container {
-        height: 72px;
-        padding: 0 var(--space-md);
-    }
-    .nav-logo { height: 48px; }
-    .nav-toggle { display: block; }
-    .nav-menu {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: rgba(15, 15, 35, 0.98);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1rem var(--space-lg);
-        display: none;
-        z-index: 1001;
-    }
-    .nav-menu.active { display: flex; }
-    .nav-link { font-size: 1rem; }
-
     :root {
         --section-padding: 4rem 0;
         --space-5xl: 6rem;
@@ -680,13 +639,6 @@ section:last-child {
     .hero-content {
         padding: var(--space-lg);
         margin: var(--space-md);
-    }
-
-    /* Improve hero perf/fit on mobile */
-    .hero { 
-        background-attachment: scroll; 
-        min-height: calc(100vh - 72px);
-        padding-top: var(--space-2xl);
     }
     
     .hero-actions {
@@ -729,8 +681,6 @@ section:last-child {
     .container {
         padding: 0 var(--space-md);
     }
-    /* Stack schedule tabs on very small screens */
-    .schedule-tabs { grid-template-columns: 1fr; }
 }
 
 /* Modern Focus States */
@@ -1311,7 +1261,7 @@ section:last-child {
 /* Responsive Design */
 @media (max-width: 768px) {
     .schedule-tabs {
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
     }
     
@@ -1343,9 +1293,6 @@ section:last-child {
         max-width: 120px;
     }
 }
-
-/* Generic responsive media */
-img, iframe { max-width: 100%; height: auto; }
 
 /* ===== FOOTER SECTION ===== */
 .footer {
