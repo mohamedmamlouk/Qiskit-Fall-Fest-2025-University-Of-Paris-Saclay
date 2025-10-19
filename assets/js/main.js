@@ -105,6 +105,50 @@
         });
     }
 
+    // ===== MOBILE MENU TOGGLE =====
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+        const toggle = document.getElementById('nav-toggle');
+        
+        if (mobileMenu.style.display === 'flex') {
+            mobileMenu.style.display = 'none';
+            toggle.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        } else {
+            mobileMenu.style.display = 'flex';
+            toggle.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    function closeMobileMenu() {
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+        const toggle = document.getElementById('nav-toggle');
+        
+        mobileMenu.style.display = 'none';
+        toggle.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+        const toggle = document.getElementById('nav-toggle');
+        
+        if (!toggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+            if (mobileMenu.style.display === 'flex') {
+                closeMobileMenu();
+            }
+        }
+    });
+
+// Close mobile menu on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 968) {
+        closeMobileMenu();
+    }
+});
+    
     // Handle initial state
     function handleInitialState() {
         var initialArticle = state.initial.substring(1) || 'about';
