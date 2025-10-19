@@ -186,28 +186,43 @@
     </div>
 
     <!-- Navigation -->
-	<nav class="navbar" id="navbar" style="background: rgba(15, 15, 35, 0.85) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; padding: 0 !important;">
-	    <div style="width: 100%; max-width: 100%; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; height: 80px;">
+	<nav class="navbar" id="navbar" style="position: fixed; top: 0; left: 0; right: 0; width: 100%; background: rgba(15, 15, 35, 0.85) !important; backdrop-filter: blur(20px) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; padding: 0 !important; z-index: 1000;">
+	    <div style="width: 100%; max-width: 100%; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; height: 80px; position: relative;">
+	        
 	        <!-- Logo -->
-	        <div style="flex-shrink: 0;">
+	        <div style="flex-shrink: 0; z-index: 1002;">
 	            <img src="assets/images/fall-fest-banner.webp" alt="Fall Fest 2025" style="height: 65px; width: auto;" loading="eager">
 	        </div>
 	        
-	        <!-- Navigation Links -->
-	        <div class="nav-menu" id="nav-menu" style="display: flex !important; align-items: center !important; gap: 6rem !important; flex: 1 !important; justify-content: center !important; margin: 0 2rem !important;">
-	            <a href="#hero" class="nav-link" style="font-size: 1rem;">Home</a>
-	            <a href="#about" class="nav-link" style="font-size: 1rem;">About</a>
-	            <a href="#team" class="nav-link" style="font-size: 1rem;">Team</a>
-	            <a href="#schedule" class="nav-link" style="font-size: 1rem;">Schedule</a>
-	            <a href="#speakers" class="nav-link" style="font-size: 1rem;">Speakers</a>
-	            <a href="#register" class="nav-link nav-cta" style="padding: 0.8rem 2.5rem; font-size: 1rem;">Register</a>
+	        <!-- Desktop Navigation Links -->
+	        <div class="nav-menu-desktop" style="display: flex; align-items: center; gap: 4rem; flex: 1; justify-content: center; margin: 0 2rem;">
+	            <a href="#hero" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Home</a>
+	            <a href="#about" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">About</a>
+	            <a href="#team" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Team</a>
+	            <a href="#schedule" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Schedule</a>
+	            <a href="#speakers" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Speakers</a>
+	        </div>
+	        
+	        <!-- Register Button (Desktop) -->
+	        <div class="register-btn-desktop" style="flex-shrink: 0;">
+	            <a href="#register" class="nav-link nav-cta" style="padding: 0.8rem 2.5rem; font-size: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; display: inline-block;">Register</a>
 	        </div>
 	        
 	        <!-- Hamburger Menu Button (Mobile Only) -->
-	        <div class="nav-toggle" id="nav-toggle" style="display: none;">
-	            <span class="bar"></span>
-	            <span class="bar"></span>
-	            <span class="bar"></span>
+	        <button class="nav-toggle" id="nav-toggle" onclick="toggleMobileMenu()" style="display: none; flex-direction: column; gap: 6px; background: transparent; border: none; cursor: pointer; padding: 8px; z-index: 1002;">
+	            <span class="bar" style="width: 25px; height: 3px; background: white; display: block; transition: all 0.3s; border-radius: 3px;"></span>
+	            <span class="bar" style="width: 25px; height: 3px; background: white; display: block; transition: all 0.3s; border-radius: 3px;"></span>
+	            <span class="bar" style="width: 25px; height: 3px; background: white; display: block; transition: all 0.3s; border-radius: 3px;"></span>
+	        </button>
+	        
+	        <!-- Mobile Menu Overlay -->
+	        <div class="nav-menu-mobile" id="nav-menu-mobile" style="position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: rgba(15, 15, 35, 0.98); backdrop-filter: blur(20px); display: none; flex-direction: column; padding: 2rem; gap: 1.5rem; z-index: 999; overflow-y: auto;">
+	            <a href="#hero" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">Home</a>
+	            <a href="#about" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">About</a>
+	            <a href="#team" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">Team</a>
+	            <a href="#schedule" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">Schedule</a>
+	            <a href="#speakers" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">Speakers</a>
+	            <a href="#register" class="nav-link-mobile" onclick="closeMobileMenu()" style="font-size: 1.2rem; color: white; text-decoration: none; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50px; text-align: center; margin-top: 1rem;">Register</a>
 	        </div>
 	    </div>
 	</nav>
