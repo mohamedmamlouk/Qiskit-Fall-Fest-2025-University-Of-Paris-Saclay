@@ -250,6 +250,8 @@
 	            <a href="#team" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Team</a>
 	            <a href="#schedule" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Schedule</a>
 	            <a href="#speakers" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Speakers</a>
+	            <a href="#panelists" class="nav-link" style="font-size: 1rem; color: #8892b0; text-decoration: none; transition: color 0.3s;">Panelists</a>
+
 	        </div>
 	        
 	        <!-- Register Button (Desktop) -->
@@ -717,7 +719,7 @@ Registration is free and open to all backgrounds — with 30 on-site places and 
         </div>
     </section>
 
-    <!-- Speakers Section -->
+    <!-- Speakers Section - Link to Dedicated Page -->
     <section id="speakers" class="speakers section">
         <div class="container">
             <div class="section-header">
@@ -725,206 +727,51 @@ Registration is free and open to all backgrounds — with 30 on-site places and 
                 <p class="section-description">Meet the quantum computing experts who will share their knowledge and insights</p>
             </div>
 
-            <!-- Speaker 1: Adrien Suau -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/adrien-suau.jpg" alt="Adrien Suau" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Adrien Suau</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Riverlane</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Deltakit: Making Quantum Error-Correction Accessible</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Quantum error correction aims at tackling efficiently the problems of hardware imperfections through error-correction protocols that are hand-crafted for quantum computers. But running quantum error-correction experiments on a real hardware comes with its own set of issues that need to be addressed by careful hardware engineering, error-correction code low-level implementation and decoder adaptation. In this talk, I plan to show several of these issues, how they might be solved, and how this affects the decoding problem and potential quantum computing hardware efficiency.</p>
-                    </div>
+            <div style="text-align: center; padding: 4rem 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="margin-bottom: 2rem;">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#4facfe" stroke-width="2" style="margin: 0 auto;">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
                 </div>
+                <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 1.5rem; font-family: var(--font-heading);">World-Class Speakers</h3>
+                <p style="color: #8892b0; font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2.5rem;">
+                    Learn from leading experts in quantum computing, quantum error correction, quantum machine learning, and quantum hardware from top institutions and companies worldwide.
+                </p>
+                <a href="speakers.html" style="display: inline-block; padding: 1.2rem 3rem; font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    View All Speakers →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panelists Section - Link to Dedicated Page -->
+    <section id="panelists" class="panelists section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Panelists</h2>
+                <p class="section-description">Industry experts and researchers leading panel discussions</p>
             </div>
 
-             <!-- Speaker 2: Xiao-Yang -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Xiaoyang.png" alt="Wang Xiao-Yang" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Wang Xiaoyang</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">iTHEMS, RIKEN</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Extracting particle mass on quantum computers: State preparation and ancilla-free measurement.</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">Extracting particle or quasi-particle mass plays a crucial role in particle physics and condensed matter physics. The particle mass can be measured by sequentially performing  (1) state preparation, (2) quantum simulation, and (3) measurement using quantum computers.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">In this talk, I will introduce the above procedures and their practical challenges on current quantum chips. In our recent work "Computing n-time correlation functions without ancilla qubits", we develop a measurement method without ancilla qubits, circumventing longstanding hardware constraints of limited qubit connectivity and short-range control operations. By additionally introducing a classical signal processing procedure, using IBM quantum hardware, we successfully extract the hadron mass of the Schwinger model within a relative error of 0.18%, even in the presence of realistic hardware limitations and noise. Finally, I will discuss the state preparation algorithm to extract the particle mass with higher accuracy.</p>
-                    </div>
+            <div style="text-align: center; padding: 4rem 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="margin-bottom: 2rem;">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#64ffda" stroke-width="2" style="margin: 0 auto;">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
                 </div>
+                <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 1.5rem; font-family: var(--font-heading);">Distinguished Panelists</h3>
+                <p style="color: #8892b0; font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2.5rem;">
+                    Engage with leading researchers, industry pioneers, and quantum technology experts from top institutions and companies worldwide during our panel discussions and Q&A sessions.
+                </p>
+                <a href="panelists.html" style="display: inline-block; padding: 1.2rem 3rem; font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #64ffda 0%, #4facfe 100%); color: #0f0f23; text-decoration: none; border-radius: 50px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    Meet Our Panelists →
+                </a>
             </div>
-
-            <!-- Speaker 3: Jacob L. Cybulski -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/jacob-cybulski.jpg" alt="Jacob L. Cybulski" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Jacob L. Cybulski</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Enquanted, Melbourne, Australia</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Exploring Quantum Machine Learning (with Qiskit)</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">This presentation introduces the fundamental concepts of quantum machine learning (QML) with a practical emphasis on the Qiskit development platform. The discussion covers the core aspects of QML, including parameterized quantum circuits (PQCs), variational quantum algorithms (VQAs), data encoding strategies, state measurement, and ansatz design.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">A key focus is quantum model training within the Qiskit environment, and in particular, hybrid quantum-classical optimization. This section explores the effective utilization of quantum machines and simulators, alongside a classical optimizer and loss function. The talk will also analyze the interaction between a model's parameter space and the Hilbert space.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Finally, we summarize significant developmental challenges, such as the "curse of dimensionality," the consequent emergence of barren plateaus, sparsity of measurement outcomes, and the model's sensitivity to parameter initialization.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker 4: Jesus Sanchez Herrero -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/jesus-sanchez.jpg" alt="Jesus Sanchez Herrero" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Jesus Sanchez Herrero</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">C12 - Client Projects & Partnerships Associate</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">The Material Revolution: Carbon Nanotubes as a Road to FTQC</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">Quantum computing's future depends on materials that can sustain coherence and scalability beyond current limits. C12 leads this material revolution by transforming ultra-clean single-wall carbon nanotubes into spin-based "quantum transistors" - in analogy to the fundamental role of the transistor in classical computing's. Their ultra-pure structure minimises charge noise and spin decoherence, offering a scalable foundation compatible with industry-standard, fault-tolerant architectures. On our platform, each spin qubit is electrically coupled to the microwave field of a superconducting resonator, which mediates effective couplings between distant qubits via virtual photons - a pathway towards implementing two-qubit gate operations. This architecture achieves long-range connectivity with low crosstalk and avoids the limitations of local coupling or electron shuttling found in other solid-state platforms.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Combining exceptional spin isolation, CMOS-compatible fabrication, and long-range connectivity via the quantum bus, C12's approach bridges the latest advances in material science and quantum engineering. Supported by our quantum emulator Callisto, these advances demonstrate how material breakthroughs - rather than incremental design tweaks - will unlock the next generation of quantum processors.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker 5: Leonardo Disilvestro -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/leonardo-disilvestro.jpg" alt="Leonardo Disilvestro" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Leonardo Disilvestro</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Entropica Labs</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Loom Design - The Quantum Error Correction Lab</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">Curious about quantum error correction (QEC) but unsure where to begin? Loom Design offers a clear path to mastering QEC, a key fundamental concept to advanced applications. Loom Design offers a collaborative environment where you can experiment, learn, and contribute to the future of quantum computing. Best of all, it's brand new: join early and help shape its growing community.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker 6: Li Tian-Yin -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Tianyin.png" alt="Li Tian-Yin" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Li Tianyin</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">iTHEMS, RIKEN</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Quantum simulations of non-perturbative quantities in hadron scattering</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">In this presentation, I will introduce our exploratory work on simulating non-perturbative quantities in hadron scattering processes using quantum computing methods. Firstly, I will talk about how to translate the language of lattice gauge theories to the language of quantum computers. Then I will introduce the quantum algorithms for simulating parton distribution functions, Light-cone distribution amplitudes, Fragmentation functions, and scattering amplitudes.</p>
-                         <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Basis QC techniques and Skills: Variational quantum algorithms, and the quantum circuit for measuring the n-point correlation functions.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker 7: Harshit Verma -->
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Verma.png" alt="Harshit Verma" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Harshit Verma</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Post-Doctoral Researcher @ MajuLab, CNRS-UCA-SU-NUS-NTU International Joint Research Laboratory, 117543 Singapore</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">How to optimize energy consumption of VQE?</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">To fully harness the power of quantum algorithms, it is crucial to develop approaches that optimize them i.e. we want to achieve a target output accuracy while using the least possible quantum resources. In this work, we present a methodology tailored for noisy variational quantum algorithms that balances the trade-off between accuracy and resource cost.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">We define algorithmic resources as the total number of quantum gates executed, since reducing this count typically leads to faster computations and greater energy efficiency. Inspired by simulations of the Variational Quantum Eigensolver (VQE), we introduce a phenomenological framework describing how accuracy depends on both the size and number of iterations of quantum circuits in the presence of noise. The main insight is that using larger quantum circuits can introduce more noise, while circuits that are too small may lack precision—so there is an optimal size and iteration count that minimizes overall gate usage for a given target accuracy. By applying this noise-metric-resource approach, we can identify the best combination of circuit depth and repetition number, optimizing the algorithm's gate count for the desired level of accuracy. This form of algorithmic optimization directly supports hardware-specific analyses of energy consumption and performance.</p>                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker 8: Massinissa Zenia 
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Massinissa.png" alt="Massinissa Zenia" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Massinissa Zenia</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">University of Brest</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Introduction to the application of ZX-calculus to quantum error correction codes</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Abstract: The emerging ZX-calculus can revolutionize quantum computing. This powerful graphical language represents quantum computation in a fundamentally different way from traditional circuit diagrams.It provides an intuitive and rigorous framework for reasoning about quantum processes through graphical representations. The ZX-calculus is employed in various applications such as circuit optimization, tensor networks and quantum error correction codes. In this talk, we will provide a brief introduction to the basic concepts of the ZX-calculus and showing how quantum error correction codes can be elegantly represented in this new formalism.</p>
-                    </div>
-                </div>
-            </div>-->
-
-            <!-- Speaker 9: Guillermo Muñoz
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Guillermo.png" alt="Guillermo Muñoz" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Guillermo Muñoz</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">FTQC Simulations for Cat-Qubit Architectures Intern, Alice and Bob</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Quantum error correction with cat qubits</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Perfect qubits only exist in textbooks. In real life, errors destroy our coherence and quantum information. A path towards fault-tolerant quantum computing is quantum error correction. In this talk you will learn about the basics of quantum error correction and how by taking advantage of the properties of cat qubits with a built-in noise bias, Alice & Bob aims to build a fault tolerant quantum computer in a very hardware-efficient way.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Speaker 10: Nouhaila Innan
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Nouhaila.png" alt="Nouhaila Innan" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Nouhaila Innan</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">eBRAIN Lab and CQTS, New York University Abu Dhabi</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Introduction to Quantum Machine Learning and Its Applications</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Quantum Machine Learning (QML) introduces a new approach to computation by combining ideas from quantum mechanics and machine learning. The talk will cover the basic concepts of QML, including how data can be represented in quantum systems and how quantum models learn from it. It will also provide an overview of common architectures and examples of applications in various areas, including finance. Finally, key challenges such as noise, scalability, and practical implementation on current hardware will be discussed to provide a clear view of the field's progress and future directions.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Speaker 11: Mamdouh Abbara
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Mamdouh.png" alt="Mamdouh Abbara" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Mamdouh Abbara</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Alice and Bob</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Hardware Talk: Efficient quantum computing</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">Alice & Bob is a quantum computing company based in Paris and Boston whose goal is to create the first universal, fault-tolerant quantum computer. Founded in 2020, Alice & Bob has raised €130 million in funding, hired over 150 employees and demonstrated experimental results surpassing those of technology giants such as Google or IBM.  Advised by Nobel Prize winning researchers, Alice & Bob specializes in cat qubits, a technology developed by the company's founders and later adopted by Amazon. Demonstrating the power of its cat architecture, Alice & Bob recently showed that it could reduce the hardware requirements for building a useful large-scale quantum computer by up to 200 times compared with competing approaches.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Speaker 12: Monalisa Singh Roy
-            <div class="speaker-card-full" style="background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
-                    <div class="speaker-avatar" style="text-align: center;">
-                        <img src="assets/images/speakers/Monalisa.png" alt="Monalisa Singh Roy" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe;" loading="lazy">
-                    </div>
-                    <div class="speaker-content">
-                        <h3 style="font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem;">Monalisa Singh Roy</h3>
-                        <p style="color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">PlanQC GmBH, Germany</p>
-                        <h4 style="font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600;">Hiking the Quantum Landscape: VQE, QAOA, Counterdiabatic Corrections, and Portfolio Optimization</h4>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">Variational quantum algorithms are among the most actively studied candidates for extracting nontrivial solutions from noisy intermediate-scale quantum devices. They rely on parameterized quantum circuits combined with classical optimization, and they already appear in proposals for quantum simulation, quantum chemistry, and discrete optimization. Understanding what these algorithms really do, and what their concrete costs and limitations are, is therefore useful both for students and for researchers who may collaborate with quantum algorithm specialists and assess applicability in their own specialist domains.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">In this lecture we will first familiarize ourselves with the basic concepts of variational quantum algorithms like Variational Quantum Eigensolver (VQE) and the Quantum Approximate Optimization Algorithm (QAOA). We will then have a brief introduction to counterdiabatic and shortcut-to-adiabaticity ideas in the setting of digitized adiabatic quantum computing, and show how local counterdiabatic corrections can be incorporated into QAOAstyle circuits as additional steering terms that aim to reduce diabatic errors at fixed or reduced circuit depth.</p>
-                        <p style="color: #8892b0; line-height: 1.8; font-size: 1rem;">In the final part of the talk, we apply these methods to a single concrete use case: binary financial portfolio optimization. It is essentially the problem of choosing the best subset of options under a budgetary (and risk) constraint. We formulate the task as a quadratic unconstrained binary optimization (QUBO) problem, map it to an Ising Hamiltonian, and compare how plain VQE, standard QAOA, and QAOA with counterdiabatic corrections perform on the same instance in terms of resource requirements and solution quality. The lecture is aimed at graduate students and researchers with a basic background in quantum mechanics and an interest in quantum algorithms for combinatorial optimization and related applications.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Responsive CSS for mobile -->
-            <style>
-                @media (max-width: 768px) {
-                    .speaker-card-full > div {
-                        grid-template-columns: 1fr !important;
-                        text-align: center;
-                    }
-                    .speaker-avatar img {
-                        margin: 0 auto;
-                    }
-                }
-            </style>
         </div>
     </section>
 
@@ -1381,5 +1228,4 @@ Registration is free and open to all backgrounds — with 30 on-site places and 
     </script>
 </body>
 </html>
-
 
