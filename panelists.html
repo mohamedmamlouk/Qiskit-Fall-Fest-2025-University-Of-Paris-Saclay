@@ -23,7 +23,9 @@
         .panelist-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(79,172,254,0.2); }
         .panelist-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start; }
         .panelist-avatar img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe; }
-        .panelist-content h3 { font-size: 2rem; color: #e6f1ff; margin-bottom: 1.5rem; }
+        .panelist-content h3 { font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem; }
+        .panelist-role { color: #64ffda; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .panelist-company { color: #4facfe; font-weight: 600; font-size: 1rem; margin-bottom: 1.5rem; }
         .panelist-bio { color: #8892b0; line-height: 1.8; font-size: 1rem; }
         @media (max-width: 768px) {
             .panelist-grid { grid-template-columns: 1fr !important; text-align: center; }
@@ -35,77 +37,19 @@
 <body>
     <a href="index.html#panelists" class="back-button">← Back to Main Page</a>
     <div class="panelists-header">
-        <h1>Panelists</h1>
-        <p>Meet the experts leading discussions at Qiskit Fall Fest 2025</p>
+        <h1>Panel Discussion</h1>
+        <p>Industry leaders sharing insights on quantum computing's future</p>
     </div>
     <div class="container">
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/etienne-parizot.jpg" alt="Prof. Étienne Parizot" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Prof. Étienne Parizot</h3>
-                    <p class="panelist-bio">Prof. Étienne Parizot is a senior French astrophysicist whose research has focused on ultra-high-energy cosmic rays and the astrophysics of high-energy particles. He graduated from the École Normale Supérieure de Lyon (1988–1992) and completed his doctorate at the CEA Saclay/Institut de Physique Nucléaire d'Orsay on the topic of particle acceleration and gamma-emission in star-forming regions. He has held key research positions at the CNRS and the APC (Astroparticule & Cosmologie) laboratory at Université Paris Diderot, and led major collaborative efforts such as the French programme for the JEM-EUSO cosmic-ray observatory. In recent years, Étienne has also engaged in pedagogy and science communication—he teaches quantum physics and relativity at the undergraduate level and creates videos and materials for a broader audience.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Monalisa.png" alt="Dr. Monalisa Singh Roy" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Dr. Monalisa Singh Roy</h3>
-                    <p class="panelist-bio">Monalisa Singh Roy is a quantum physicist and quantum algorithms engineer with a strong focus on real-world optimisation using quantum technologies. She earned her PhD at the S. N. Bose National Centre for Basic Sciences in Kolkata, India (2015–2021), where her research explored interactions, correlations, and competing orders in strongly correlated one-dimensional quantum wires and quantum gases. Following her doctorate, she completed a postdoctoral fellowship at Bar-Ilan University, Israel (2021–2025), investigating quantum many-body physics, dynamics of quantum information, measurement-induced phase transitions, and quantum chaos. Currently, Monalisa works at planqc in Munich as a Quantum Algorithms Engineer, developing quantum digital annealer (DCQO, QAOA) and tensor-network inspired algorithms (ITE, DMRG, TDVP, QA) for applications in finance, logistics, and other optimisation problems. Her research bridges the theoretical depths of quantum information with practical industry challenges, creating noise-aware methods that advance scalable quantum optimisation.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/maxence-grandadam.jpg" alt="Maxence Grandadam" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Maxence Grandadam</h3>
-                    <p class="panelist-bio">Maxence Grandadam is a quantum researcher and research scientist with expertise in strongly correlated systems and quantum algorithms. He earned his PhD from the Institut de Physique Théorique at CEA Saclay (2018–2021), where he applied analytic field theory techniques to effective models describing high-temperature superconductors. Following his doctorate, Maxence held a postdoctoral fellowship at Memorial University of Newfoundland (2021–2024), using advanced computational methods on large-scale clusters to study the properties of strongly correlated systems. Since January 2024, he has been a Research Scientist at Haiqu in Paris, where he researches, designs, and prototypes quantum algorithms for specific applications, maintains expertise in quantum compilers and algorithms. His work bridges fundamental physics, computational techniques, and practical quantum algorithm development, advancing the implementation of quantum technologies in real-world problems.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Guillermo.png" alt="Guillermo Muñoz Ovejero" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Guillermo Muñoz Ovejero</h3>
-                    <p class="panelist-bio">Guillermo Muñoz Ovejero is a Master's student in Quantum Engineering at ETH Zürich and currently an intern focused on quantum error correction and cat-qubit architectures at Alice & Bob. His internship work concentrates on simulation and design aspects that support fault-tolerant cat-qubit systems — an area central to Alice & Bob's approach to scalable quantum computing.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Massinissa.png" alt="Massinissa Zenia" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Massinissa Zenia</h3>
-                    <p class="panelist-bio">Massinissa Zenia is a PhD researcher at the Lab-STICC (Université de Bretagne Occidentale, Brest), where he works within the SI3 team on the design and decoding of short quantum error-correcting codes. His research contributes to advancing the theory and practical implementation of quantum error correction, a key component of scalable quantum computing.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/leonardo-disilvestro.jpg" alt="Dr. Leonardo Disilvestro" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Dr. Leonardo Disilvestro</h3>
-                    <p class="panelist-bio">Leonardo has over a decade of experience in quantum computing, with a strong foundation in mathematical physics and quantum information theory. He earned his degree in Mathematical Physics from the University of Edinburgh and completed his Ph.D. in Quantum Information Theory at Télécom ParisTech. As Head of Integrations at Entropica Labs, Leonardo works at the intersection of software engineering and quantum research—building bridges between Entropica's quantum software stack and its partners.</p>
-                </div>
-            </div>
-        </div>
 
         <div class="panelist-card">
             <div class="panelist-grid">
                 <div class="panelist-avatar"><img src="assets/images/speakers/jesus-sanchez.jpg" alt="Jesús Sánchez Herrero" loading="lazy"></div>
                 <div class="panelist-content">
                     <h3>Jesús Sánchez Herrero</h3>
-                    <p class="panelist-bio">Jesús Sánchez Herrero is an R&D Engineer and Business Developer working at the intersection of Quantum Computing, nanodevices, and company strategy. He currently serves in the Business Development team at C12, one of Europe's leading quantum computing startups building scalable carbon-based processors, focusing on Client Projects & Partnerships. Jesús' background bridges research, engineering, and international cooperation. As a participant in the "Vulcanus in Japan program for EU-Japan Industrial Cooperation" (2021–2022), he carried out nanomaterials research at NTT Basic Research Labs in Atsugi, Japan. Later on, he worked on quantum device fabrication at Thales Research & Technology (Palaiseau, France) and the CEA of Saclay (French Commission for Atomic Energy). A collaborator of the think-tank Le Lab Quantique, Jesús actively contributes to building the European quantum ecosystem and fostering dialogue between research, industry, and student communities. With a background spanning both industry and research in quantum, he brings an interdisciplinary approach to advancing quantum technologies and scaling them toward commercially meaningful applications. In particular, he coordinates with the ecosystem to help translate companies' computational challenges into impactful proof-of-concepts and collaboration opportunities.</p>
+                    <p class="panelist-role">Client Projects & Partnerships Associate</p>
+                    <p class="panelist-company">C12</p>
+                    <p class="panelist-bio">Jesús Sánchez Herrero is an R&D engineer and business developer working at the intersection of quantum materials, nanodevices, and quantum computing strategy. He currently serves in Business Development at C12 Quantum Electronics, one of Europe's leading startups building scalable quantum processors based on carbon nanotube technology. Jesús' background bridges research, engineering, and international collaboration. As part of the Vulcanus in Japan program (2021–2022), he worked at NTT Basic Research Labs in Atsugi, Japan, focusing on nanofabrication and quantum device engineering. Prior to that, he contributed to research projects at Thales Research & Technology and the CEA (French Commission for Alternative Energies and Atomic Energy). A collaborator of Le Lab Quantique, Jesús actively contributes to building the European quantum ecosystem and fostering dialogue between research, industry, and innovation policy. With a background spanning automation, materials science, and physics, he brings an interdisciplinary approach to advancing quantum technologies and scaling them toward practical applications.</p>
                 </div>
             </div>
         </div>
@@ -115,6 +59,8 @@
                 <div class="panelist-avatar"><img src="assets/images/speakers/adrien-suau.jpg" alt="Dr. Adrien Suau" loading="lazy"></div>
                 <div class="panelist-content">
                     <h3>Dr. Adrien Suau</h3>
+                    <p class="panelist-role">Quantum Computing Specialist</p>
+                    <p class="panelist-company">Riverlane</p>
                     <p class="panelist-bio">Adrien Suau is an entrepreneur and quantum-computing specialist dedicated to making the next generation of quantum technologies accessible. Adrien defended his PhD in Quantum Computing at the Centre Europeen de Recherche et de Formation Avancée en Calcul Scientifique (CERFACS) in 2022, where his research spanned quantum algorithms, scientific computing, and hardware-aware implementations. Since January 2023, he's been leading his venture, QraftWare, with an ambition to bridge quantum theory and practical, developer-friendly tools.</p>
                 </div>
             </div>
@@ -125,6 +71,8 @@
                 <div class="panelist-avatar"><img src="assets/images/speakers/pierre-jaeger.jpg" alt="Pierre Jaeger" loading="lazy"></div>
                 <div class="panelist-content">
                     <h3>Pierre Jaeger</h3>
+                    <p class="panelist-role">IBM Technical Director</p>
+                    <p class="panelist-company">IBM Quantum</p>
                     <p class="panelist-bio">Pierre Jaeger is Quantum Strategic Partnership Executive at IBM Quantum (EMEA), where he leads the development of strategic alliances across Europe between private enterprises, research institutions, and government organizations. Holding a degree from Polytech Sorbonne (Mathematics & Digital Computing, 2005), Pierre began his career at the CEA in scientific computing and parallel codes, followed by roles at CSSI supporting CEA's scientific platforms. He joined IBM in 2006 and has held senior technical and architectural positions, including Technical Director for IBM Systems France before pivoting to quantum strategy. In his current role, Pierre applies deep technical expertise and leadership experience to translate quantum technology into real industrial and research use-cases—ensuring that quantum computing is understood, adopted, and embedded in operations. He is recognized for bridging high-level technological vision with large-scale enterprise adoption.</p>
                 </div>
             </div>
@@ -132,20 +80,24 @@
 
         <div class="panelist-card">
             <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Mamdouh.png" alt="Mamdouh Abbara" loading="lazy"></div>
+                <div class="panelist-avatar"><img src="assets/images/speakers/maxence-grandadam.jpg" alt="Maxence Grandadam" loading="lazy"></div>
                 <div class="panelist-content">
-                    <h3>Mamdouh Abbara</h3>
-                    <p class="panelist-bio">Mamdouh Abbara earned his PhD at Inria (Région de Paris, France), specialising in quantum error-correction codes. He brings over a decade of experience in management and transformation across public-sector organisations and has also worked as a strategy consultant at Boston Consulting Group (BCG). Currently, he is Quantum Engagement Specialist at Alice & Bob, helping enterprises harness the potential of quantum computing. Passionate about scaling innovations that positively impact both people and the environment, Mamdouh combines deep technical expertise in quantum error correction with strategic insight to guide organisations through the quantum era.</p>
+                    <h3>Maxence Grandadam</h3>
+                    <p class="panelist-role">Research Scientist - Quantum Algorithms</p>
+                    <p class="panelist-company">Haiqu</p>
+                    <p class="panelist-bio">Maxence Grandadam is a quantum researcher and research scientist with expertise in strongly correlated systems and quantum algorithms. He earned his PhD from the Institut de Physique Théorique at CEA Saclay (2018–2021), where he applied analytic field theory techniques to effective models describing high-temperature superconductors. Following his doctorate, Maxence held a postdoctoral fellowship at Memorial University of Newfoundland (2021–2024), using advanced computational methods on large-scale clusters to study the properties of strongly correlated systems. Since January 2024, he has been a Research Scientist at Haiqu in Paris, where he researches, designs, and prototypes quantum algorithms for specific applications, maintains expertise in quantum compilers and algorithms. His work bridges fundamental physics, computational techniques, and practical quantum algorithm development, advancing the implementation of quantum technologies in real-world problems.</p>
                 </div>
             </div>
         </div>
 
         <div class="panelist-card">
             <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/jacob-cybulski.jpg" alt="Dr. Jacob Cybulski" loading="lazy"></div>
+                <div class="panelist-avatar"><img src="assets/images/speakers/leonardo-disilvestro.jpg" alt="Dr. Leonardo Disilvestro" loading="lazy"></div>
                 <div class="panelist-content">
-                    <h3>Dr. Jacob Cybulski</h3>
-                    <p class="panelist-bio">Dr. Jacob Cybulski is the founder of Enquanted, providing research, training and consulting services in quantum computing. He is also Honorary Associate Professor in Quantum Computing, School of IT, Deakin University, Australia. Jacob's projects involve quantum machine learning for understanding complex data, as well as, development of algorithms and applications for prediction and anomaly detection in business, engineering, and science. He is dedicated to education and promotion of quantum technology. Jacob's work also concerns classical machine learning, business analytics and data visualization. He collaborates internationally with a wide network of quantum researchers and developers.</p>
+                    <h3>Dr. Leonardo Disilvestro</h3>
+                    <p class="panelist-role">Head of Integrations</p>
+                    <p class="panelist-company">Entropica Labs</p>
+                    <p class="panelist-bio">Leonardo has over a decade of experience in quantum computing, with a strong foundation in mathematical physics and quantum information theory. He earned his degree in Mathematical Physics from the University of Edinburgh and completed his Ph.D. in Quantum Information Theory at Télécom ParisTech. As Head of Integrations at Entropica Labs, Leonardo works at the intersection of software engineering and quantum research—building bridges between Entropica's quantum software stack and its partners.</p>
                 </div>
             </div>
         </div>
@@ -155,6 +107,8 @@
                 <div class="panelist-avatar"><img src="assets/images/speakers/mariam-gassama.jpg" alt="Mariam Gassama" loading="lazy"></div>
                 <div class="panelist-content">
                     <h3>Mariam Gassama</h3>
+                    <p class="panelist-role">Operations</p>
+                    <p class="panelist-company">Unitary Foundation</p>
                     <p class="panelist-bio">Mariam Gassama has a background across investment banking, venture capital, and deeptech startups. She discovered quantum computing in 2019 while working in VC, after meeting a pioneering French quantum startup, and has since focused on strengthening the ecosystem. She began her career at Goldman Sachs and Qatalyst Partners in London, advising leading tech companies on IPOs, M&A, and fundraising. Mariam studied at ESSEC Business School and completed an exchange at École des Ponts et Chaussées. She later joined the MIT xPRO quantum program, volunteered with Le Lab Quantique, and advised the leadership team at Alice & Bob. She now leads the development of French operations at the Unitary Foundation, supporting open-source quantum software initiatives across Europe.</p>
                 </div>
             </div>
@@ -162,30 +116,12 @@
 
         <div class="panelist-card">
             <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Nouhaila.png" alt="Dr. Nouhaila Innan" loading="lazy"></div>
+                <div class="panelist-avatar"><img src="assets/images/speakers/Mamdouh.png" alt="Mamdouh Abbara" loading="lazy"></div>
                 <div class="panelist-content">
-                    <h3>Dr. Nouhaila Innan</h3>
-                    <p class="panelist-bio">Nouhaila Innan is a researcher at the forefront of quantum machine learning and quantum algorithms, currently serving as Research Team Lead at the eBRAIN Lab and as a Postdoctoral Associate at the Center for Quantum and Topological Systems (CQTS) at New York University Abu Dhabi. She earned her PhD in Quantum Machine Learning from Hassan II University of Casablanca, where her research explored the integration of quantum computing with machine learning to address complex challenges in fields such as finance and cybersecurity. Nouhaila's work focuses on developing quantum neural networks, quantum optimization, and federated learning approaches, bridging theoretical advances with real-world applications. Beyond her research, she is deeply engaged in mentoring and outreach, helping make quantum technologies more accessible to students and practitioners worldwide.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Verma.png" alt="Harshit Verma" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Harshit Verma</h3>
-                    <p class="panelist-bio">Harshit Verma holds an Integrated M.Tech in Engineering Physics from Indian Institute of Technology (BHU), Varanasi, where he graduated in 2017. He went on to complete his Ph.D. in Physics at The University of Queensland (St Lucia, Australia) in 2023. Currently, he is a quantum computing researcher based in Singapore and affiliated with the Centre for Quantum Technologies (CQT) at the National University of Singapore. His research spans quantum thermodynamics, causal order in quantum processes, and the energetics of quantum algorithms.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <div class="panelist-grid">
-                <div class="panelist-avatar"><img src="assets/images/speakers/Xiaoyang.png" alt="Xiaoyang Wang" loading="lazy"></div>
-                <div class="panelist-content">
-                    <h3>Xiaoyang Wang</h3>
-                    <p class="panelist-bio">Xiaoyang Wang is a Postdoctoral Researcher in the Quantum Mathematical Science Team within the Division of Applied Mathematical Science at the RIKEN Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS). His research lies at the intersection of quantum computation, many-body physics and high-energy theory, with a focus on near-term quantum algorithms for lattice field theory, spin models and combinatorial optimisation problems. Previously he held a post-doctoral appointment in the Field-Theory Research Team at the RIKEN Center for Computational Science (R-CCS). In his work, Xiaoyang seeks to demonstrate genuine advantage with quantum computers on real-world tasks using current devices and cutting-edge theory.</p>
+                    <h3>Mamdouh Abbara</h3>
+                    <p class="panelist-role">Account Executive</p>
+                    <p class="panelist-company">Alice & Bob</p>
+                    <p class="panelist-bio">Mamdouh Abbara earned his PhD at Inria (Région de Paris, France), specialising in quantum error-correction codes. He brings over a decade of experience in management and transformation across public-sector organisations and has also worked as a strategy consultant at Boston Consulting Group (BCG). Currently, he is Quantum Engagement Specialist at Alice & Bob, helping enterprises harness the potential of quantum computing. Passionate about scaling innovations that positively impact both people and the environment, Mamdouh combines deep technical expertise in quantum error correction with strategic insight to guide organisations through the quantum era.</p>
                 </div>
             </div>
         </div>
