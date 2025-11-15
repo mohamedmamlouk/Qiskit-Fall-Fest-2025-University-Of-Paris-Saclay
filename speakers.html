@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Speakers - Qiskit Fall Fest 2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/site-clean-143440.css?v=20250120-000001">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-padding-top: 100px; font-size: 18px; }
+        body { font-size: 1.1rem; background: linear-gradient(135deg, #0f0f23 0%, #020024 100%); min-height: 100vh; }
+        .back-button { position: fixed; top: 2rem; left: 2rem; z-index: 1000; padding: 0.8rem 1.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .back-button:hover { background: rgba(255,255,255,0.2); transform: translateX(-5px); }
+        .speakers-header { text-align: center; padding: 6rem 2rem 4rem; }
+        .speakers-header h1 { font-size: clamp(2.5rem,6vw,4rem); color: #e6f1ff; margin-bottom: 1rem; font-family: 'Poppins',sans-serif; }
+        .speakers-header p { font-size: 1.3rem; color: #8892b0; max-width: 700px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .speaker-card { background: rgba(255,255,255,0.03); border-radius: 20px; padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255,255,255,0.1); }
+        .speaker-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(79,172,254,0.2); }
+        .speaker-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start; }
+        .speaker-avatar img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #4facfe; }
+        .speaker-content h3 { font-size: 2rem; color: #e6f1ff; margin-bottom: 0.5rem; }
+        .speaker-affiliation { color: #4facfe; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .speaker-title { font-size: 1.3rem; color: #64ffda; margin-bottom: 1.5rem; font-weight: 600; }
+        .speaker-abstract { color: #8892b0; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem; }
+        @media (max-width: 768px) {
+            .speaker-grid { grid-template-columns: 1fr !important; text-align: center; }
+            .speaker-avatar img { margin: 0 auto; }
+            .back-button { top: 1rem; left: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html#speakers" class="back-button">← Back to Main Page</a>
+    <div class="speakers-header">
+        <h1>Featured Speakers</h1>
+        <p>Meet the quantum computing experts at Qiskit Fall Fest 2025</p>
+    </div>
+    <div class="container">
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/etienne-parizot.jpg" alt="Prof. Etienne Parizot" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Prof. Etienne Parizot</h3>
+                    <p class="speaker-affiliation">Université Paris Cité</p>
+                    <h4 class="speaker-title">Quantum Physics Foundations</h4>
+                    <p class="speaker-abstract">Quantum physics is one of the most profound and far-reaching achievements of the human scientific enterprise. It is often portrayed as defying common sense, or even as fundamentally incomprehensible. This is far from true—although it does have some counter-intuitive consequences. In fact, most of the key elements of our ordinary worldview remain entirely unchanged by quantum physics.</p>
+                    <p class="speaker-abstract">In this introductory presentation, we will review the main properties of quantum systems that are especially relevant for the Qiskit Fall Fest 2025. The central point is the fundamental structure of the "space of states" of any physical system, discovered to have the structure of a vector space. This is a mathematical object entirely familiar to anyone who has ever learned about spatial vectors in school. The same is true of one of the inseparable features of the physical world, without which the vector-space description would be pointless: linearity. From these simple ingredients, the rest follows naturally: qubits, measurement, entanglement, quantum computation…</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Monalisa.png" alt="Monalisa Singh Roy" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Monalisa Singh Roy</h3>
+                    <p class="speaker-affiliation">PlanQC GmBH, Germany</p>
+                    <h4 class="speaker-title">Hiking the Quantum Landscape: VQE, QAOA, Counterdiabatic Corrections, and Portfolio Optimization</h4>
+                    <p class="speaker-abstract">Variational quantum algorithms are among the most actively studied candidates for extracting nontrivial solutions from noisy intermediate-scale quantum devices. They rely on parameterized quantum circuits combined with classical optimization, and they already appear in proposals for quantum simulation, quantum chemistry, and discrete optimization. Understanding what these algorithms really do, and what their concrete costs and limitations are, is therefore useful both for students and for researchers who may collaborate with quantum algorithm specialists and assess applicability in their own specialist domains.</p>
+                    <p class="speaker-abstract">In this lecture we will first familiarize ourselves with the basic concepts of variational quantum algorithms like Variational Quantum Eigensolver (VQE) and the Quantum Approximate Optimization Algorithm (QAOA). We will then have a brief introduction to counterdiabatic and shortcut-to-adiabaticity ideas in the setting of digitized adiabatic quantum computing, and show how local counterdiabatic corrections can be incorporated into QAOA-style circuits as additional steering terms that aim to reduce diabatic errors at fixed or reduced circuit depth.</p>
+                    <p class="speaker-abstract">In the final part of the talk, we apply these methods to a single concrete use case: binary financial portfolio optimization. It is essentially the problem of choosing the best subset of options under a budgetary (and risk) constraint. We formulate the task as a quadratic unconstrained binary optimization (QUBO) problem, map it to an Ising Hamiltonian, and compare how plain VQE, standard QAOA, and QAOA with counterdiabatic corrections perform on the same instance in terms of resource requirements and solution quality. The lecture is aimed at graduate students and researchers with a basic background in quantum mechanics and an interest in quantum algorithms for combinatorial optimization and related applications.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Massinissa.png" alt="Massinissa Zenia" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Massinissa Zenia</h3>
+                    <p class="speaker-affiliation">University of Brest</p>
+                    <h4 class="speaker-title">Introduction to the Application of ZX-calculus to Quantum Error Correction Codes</h4>
+                    <p class="speaker-abstract">The emerging ZX-calculus can revolutionize quantum computing. This powerful graphical language represents quantum computation in a fundamentally different way from traditional circuit diagrams. It provides an intuitive and rigorous framework for reasoning about quantum processes through graphical representations. The ZX-calculus is employed in various applications such as circuit optimization, tensor networks and quantum error correction codes. In this talk, we will provide a brief introduction to the basic concepts of the ZX-calculus and showing how quantum error correction codes can be elegantly represented in this new formalism.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Guillermo.png" alt="Guillermo Muñoz" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Guillermo Muñoz</h3>
+                    <p class="speaker-affiliation">FTQC Simulations for Cat-Qubit Architectures Intern, Alice & Bob</p>
+                    <h4 class="speaker-title">Quantum Error Correction with Cat Qubits</h4>
+                    <p class="speaker-abstract">Perfect qubits only exist in textbooks. In real life, errors destroy our coherence and quantum information. A path towards fault-tolerant quantum computing is quantum error correction. In this talk you will learn about the basics of quantum error correction and how by taking advantage of the properties of cat qubits with a built-in noise bias, Alice & Bob aims to build a fault tolerant quantum computer in a very hardware-efficient way.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/adrien-suau.jpg" alt="Adrian Suau" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Adrian Suau</h3>
+                    <p class="speaker-affiliation">Riverlane</p>
+                    <h4 class="speaker-title">Deltakit: Making Quantum Error-Correction Accessible</h4>
+                    <p class="speaker-abstract">Quantum error correction aims at tackling efficiently the problems of hardware imperfections through error-correction protocols that are hand-crafted for quantum computers. But running quantum error-correction experiments on a real hardware comes with its own set of issues that need to be addressed by careful hardware engineering, error-correction code low-level implementation and decoder adaptation. In this talk, I plan to show several of these issues, how they might be solved, and how this affects the decoding problem and potential quantum computing hardware efficiency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/leonardo-disilvestro.jpg" alt="Leonardo Disilvestro" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Leonardo Disilvestro</h3>
+                    <p class="speaker-affiliation">Entropica Labs</p>
+                    <h4 class="speaker-title">Loom Design - The Quantum Error Correction Lab</h4>
+                    <p class="speaker-abstract">Curious about quantum error correction (QEC) but unsure where to begin? Loom Design offers a clear path to mastering QEC, a key fundamental concept to advanced applications. Loom Design offers a collaborative environment where you can experiment, learn, and contribute to the future of quantum computing. Best of all, it's brand new: join early and help shape its growing community.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/mariam-gassama.jpg" alt="Mariam Gassama" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Mariam Gassama</h3>
+                    <p class="speaker-affiliation">Unitary Foundation</p>
+                    <h4 class="speaker-title">Leading Open-Source Quantum Software Initiatives</h4>
+                    <p class="speaker-abstract">Mariam Gassama has a background across investment banking, venture capital, and deeptech startups. She discovered quantum computing in 2019 while working in VC, after meeting a pioneering French quantum startup, and has since focused on strengthening the ecosystem. She began her career at Goldman Sachs and Qatalyst Partners in London, advising leading tech companies on IPOs, M&A, and fundraising. Mariam studied at ESSEC Business School and completed an exchange at École des Ponts et Chaussées. She later joined the MIT xPRO quantum program, volunteered with Le Lab Quantique, and advised the leadership team at Alice & Bob. She now leads the development of French operations at the Unitary Foundation, supporting open-source quantum software initiatives across Europe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Mamdouh.png" alt="Mamdouh Abbara" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Mamdouh Abbara</h3>
+                    <p class="speaker-affiliation">Alice & Bob</p>
+                    <h4 class="speaker-title">Hardware Talk: Efficient Quantum Computing</h4>
+                    <p class="speaker-abstract">Alice & Bob is a quantum computing company based in Paris and Boston whose goal is to create the first universal, fault-tolerant quantum computer. Founded in 2020, Alice & Bob has raised €130 million in funding, hired over 150 employees and demonstrated experimental results surpassing those of technology giants such as Google or IBM. Advised by Nobel Prize winning researchers, Alice & Bob specializes in cat qubits, a technology developed by the company's founders and later adopted by Amazon. Demonstrating the power of its cat architecture, Alice & Bob recently showed that it could reduce the hardware requirements for building a useful large-scale quantum computer by up to 200 times compared with competing approaches.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/jesus-sanchez.jpg" alt="Jesús Sánchez Herrero" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Jesús Sánchez Herrero</h3>
+                    <p class="speaker-affiliation">C12 - Client Projects & Partnerships Associate</p>
+                    <h4 class="speaker-title">The Material Revolution: Carbon Nanotubes as a Road to FTQC</h4>
+                    <p class="speaker-abstract">Quantum computing's future depends on materials that can sustain coherence and scalability beyond current limits. C12 leads this material revolution by transforming ultra-clean single-wall carbon nanotubes into spin-based "quantum transistors" - in analogy to the fundamental role of the transistor in classical computing's. Their ultra-pure structure minimises charge noise and spin decoherence, offering a scalable foundation compatible with industry-standard, fault-tolerant architectures. On our platform, each spin qubit is electrically coupled to the microwave field of a superconducting resonator, which mediates effective couplings between distant qubits via virtual photons - a pathway towards implementing two-qubit gate operations. This architecture achieves long-range connectivity with low crosstalk and avoids the limitations of local coupling or electron shuttling found in other solid-state platforms.</p>
+                    <p class="speaker-abstract">Combining exceptional spin isolation, CMOS-compatible fabrication, and long-range connectivity via the quantum bus, C12's approach bridges the latest advances in material science and quantum engineering. Supported by our quantum emulator Callisto, these advances demonstrate how material breakthroughs - rather than incremental design tweaks - will unlock the next generation of quantum processors.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Xiaoyang.png" alt="Wang Xiaoyang" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Wang Xiaoyang</h3>
+                    <p class="speaker-affiliation">iTHEMS, RIKEN</p>
+                    <h4 class="speaker-title">Extracting Particle Mass on Quantum Computers: State Preparation and Ancilla-Free Measurement</h4>
+                    <p class="speaker-abstract">Extracting particle or quasi-particle mass plays a crucial role in particle physics and condensed matter physics. The particle mass can be measured by sequentially performing (1) state preparation, (2) quantum simulation, and (3) measurement using quantum computers.</p>
+                    <p class="speaker-abstract">In this talk, I will introduce the above procedures and their practical challenges on current quantum chips. In our recent work "Computing n-time correlation functions without ancilla qubits", we develop a measurement method without ancilla qubits, circumventing longstanding hardware constraints of limited qubit connectivity and short-range control operations. By additionally introducing a classical signal processing procedure, using IBM quantum hardware, we successfully extract the hadron mass of the Schwinger model within a relative error of 0.18%, even in the presence of realistic hardware limitations and noise. Finally, I will discuss the state preparation algorithm to extract the particle mass with higher accuracy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Tianyin.png" alt="Li Tianyin" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Li Tianyin</h3>
+                    <p class="speaker-affiliation">iTHEMS, RIKEN</p>
+                    <h4 class="speaker-title">Quantum Simulations of Non-Perturbative Quantities in Hadron Scattering</h4>
+                    <p class="speaker-abstract">In this presentation, I will introduce our exploratory work on simulating non-perturbative quantities in hadron scattering processes using quantum computing methods. Firstly, I will talk about how to translate the language of lattice gauge theories to the language of quantum computers. Then I will introduce the quantum algorithms for simulating parton distribution functions, Light-cone distribution amplitudes, Fragmentation functions, and scattering amplitudes.</p>
+                    <p class="speaker-abstract">Basis QC techniques and Skills: Variational quantum algorithms, and the quantum circuit for measuring the n-point correlation functions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Nouhaila.png" alt="Nouhaila Innan" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Nouhaila Innan</h3>
+                    <p class="speaker-affiliation">eBRAIN Lab and CQTS, New York University Abu Dhabi</p>
+                    <h4 class="speaker-title">Introduction to Quantum Machine Learning and Its Applications</h4>
+                    <p class="speaker-abstract">Quantum Machine Learning (QML) introduces a new approach to computation by combining ideas from quantum mechanics and machine learning. The talk will cover the basic concepts of QML, including how data can be represented in quantum systems and how quantum models learn from it. It will also provide an overview of common architectures and examples of applications in various areas, including finance. Finally, key challenges such as noise, scalability, and practical implementation on current hardware will be discussed to provide a clear view of the field's progress and future directions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/jacob-cybulski.jpg" alt="Jacob L. Cybulski" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Jacob L. Cybulski</h3>
+                    <p class="speaker-affiliation">Enquanted, Melbourne, Australia</p>
+                    <h4 class="speaker-title">Exploring Quantum Machine Learning (with Qiskit)</h4>
+                    <p class="speaker-abstract">This presentation introduces the fundamental concepts of quantum machine learning (QML) with a practical emphasis on the Qiskit development platform. The discussion covers the core aspects of QML, including parameterized quantum circuits (PQCs), variational quantum algorithms (VQAs), data encoding strategies, state measurement, and ansatz design.</p>
+                    <p class="speaker-abstract">A key focus is quantum model training within the Qiskit environment, and in particular, hybrid quantum-classical optimization. This section explores the effective utilization of quantum machines and simulators, alongside a classical optimizer and loss function. The talk will also analyze the interaction between a model's parameter space and the Hilbert space.</p>
+                    <p class="speaker-abstract">Finally, we summarize significant developmental challenges, such as the "curse of dimensionality," the consequent emergence of barren plateaus, sparsity of measurement outcomes, and the model's sensitivity to parameter initialization.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker-card">
+            <div class="speaker-grid">
+                <div class="speaker-avatar"><img src="assets/images/speakers/Verma.png" alt="Harshit Verma" loading="lazy"></div>
+                <div class="speaker-content">
+                    <h3>Harshit Verma</h3>
+                    <p class="speaker-affiliation">Post-Doctoral Researcher @ MajuLab, CNRS-UCA-SU-NUS-NTU International Joint Research Laboratory, Singapore & Centre for Quantum Technologies, National University of Singapore</p>
+                    <h4 class="speaker-title">How to Optimize Energy Consumption of VQE?</h4>
+                    <p class="speaker-abstract">To fully harness the power of quantum algorithms, it is crucial to develop approaches that optimize them i.e. we want to achieve a target output accuracy while using the least possible quantum resources. In this work, we present a methodology tailored for noisy variational quantum algorithms that balances the trade-off between accuracy and resource cost.</p>
+                    <p class="speaker-abstract">We define algorithmic resources as the total number of quantum gates executed, since reducing this count typically leads to faster computations and greater energy efficiency. Inspired by simulations of the Variational Quantum Eigensolver (VQE), we introduce a phenomenological framework describing how accuracy depends on both the size and number of iterations of quantum circuits in the presence of noise. The main insight is that using larger quantum circuits can introduce more noise, while circuits that are too small may lack precision—so there is an optimal size and iteration count that minimizes overall gate usage for a given target accuracy. By applying this noise-metric-resource approach, we can identify the best combination of circuit depth and repetition number, optimizing the algorithm's gate count for the desired level of accuracy. This form of algorithmic optimization directly supports hardware-specific analyses of energy consumption and performance.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
